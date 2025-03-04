@@ -11,7 +11,7 @@ export default function Hamburger() {
   return (
     <Sheet className="lg:hidden">
       <SheetTrigger>
-        <AlignJustify size={24} />
+        <AlignJustify size={30} />
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>
