@@ -13,7 +13,7 @@ export default function Home() {
           alt="logo"
         />
 
-        <div className={`text-center pt-2 lg:text-left`}>
+        <div className={`text-center pt-2 `}>
           <h1 className="text-[14px] ">Πολιτιστικός Σύλλογος Νέας Βύσσας</h1>
           <span className="text-xl font-semibold text-primary">
             &quot;Στέφανος Καραθεοδωρής&quot;
