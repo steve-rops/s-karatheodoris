@@ -25,7 +25,9 @@ export default function layout({ children }) {
           </div>
         </div>
 
-        <Hamburger className="lg:hidden" />
+        <div className="lg:hidden">
+          <Hamburger />
+        </div>
 
         <div className="hidden lg:block">
           <ul className="flex justify-center gap-4 text-xs lg:text-lg ">

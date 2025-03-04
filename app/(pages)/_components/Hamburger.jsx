@@ -15,9 +15,9 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-export default function Hamburger({ className }) {
+export default function Hamburger() {
   return (
-    <Sheet>
+    <Sheet className="lg:hidden">
       <SheetTrigger>
         <AlignJustify size={24} />
       </SheetTrigger>
