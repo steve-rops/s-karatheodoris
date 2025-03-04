@@ -1,15 +1,7 @@
-"use client";
-
-import {
-  AlignJustify,
-  ArrowBigRightDash,
-  SquareArrowOutDownLeft,
-  X,
-} from "lucide-react";
+import { AlignJustify, SquareArrowOutDownLeft } from "lucide-react";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,

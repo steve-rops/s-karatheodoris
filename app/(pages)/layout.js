@@ -7,25 +7,25 @@ const space = Space_Mono({ weight: ["400", "700"], subsets: ["latin"] });
 export default function layout({ children }) {
   return (
     <>
-      <nav className="py-2 flex items-center justify-between">
+      <nav className="py-2 relative">
         <div className="flex items-center">
           <Image
             src="/sk-logo.svg"
-            className="text-primary"
+            className="mx-auto"
             width={100}
             height={100}
             alt="logo"
           />
-          <div
-            className={`flex flex-col justify-between text-xs h-full font-semibold ${space.className} antialiased`}
-          >
-            <p>Πολιτιστικός Σύλλογος</p>
-            <p>Νέας Βύσσας</p>
-            <p>Στέφανος Καραθεοδωρής</p>
-          </div>
         </div>
 
-        <div className="lg:hidden">
+        <div className={`text-center ${space.className} pt-2`}>
+          <h1 className="text-[14px] ">Πολιτιστικός Σύλλογος Νέας Βύσσας</h1>
+          <span className="text-xl font-semibold text-primary">
+            Στέφανος Καραθεοδωρής
+          </span>
+        </div>
+
+        <div className="lg:hidden absolute right-2 top-2">
           <Hamburger />
         </div>
 
