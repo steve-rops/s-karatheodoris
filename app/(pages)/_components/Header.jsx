@@ -7,6 +7,7 @@ import Link from "next/link";
 import Hamburger from "./Hamburger";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import FacebookIcon from "@/public/facebook";
 
 export default function Header() {
   const pathname = usePathname();
@@ -27,6 +28,7 @@ export default function Header() {
 
   return (
     <div className="w-full">
+      {/* social media links */}
       <div className="bg-primary text-white p-2 flex items-center gap-4">
         <Link
           target="_blank"
@@ -35,7 +37,13 @@ export default function Header() {
         >
           <InstaIcon color="#89857d" size={24} />
         </Link>
-
+        <Link
+          target="_blank"
+          rel="noopener noreferrer"
+          href={`https://www.facebook.com/share/16B6jDaqTU/`}
+        >
+          <FacebookIcon color="#89857d" size={24} />
+        </Link>
         <Link
           href="mailto:skaratheodoris@yahoo.gr"
           target="_blank"
