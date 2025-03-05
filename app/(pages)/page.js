@@ -17,7 +17,7 @@ export default function Home() {
         </Link>
 
         <Link
-          href="mailto:example@example.com"
+          href="mailto:skaratheodoris@yahoo.gr"
           target="_blank"
           rel="noopener noreferrer"
         >
