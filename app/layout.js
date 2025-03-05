@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${poppins.className} antialiased`}>
-        <div className="max-w-[1440px] mx-auto px-2">{children}</div>
+        <div className="max-w-[1440px] mx-auto">{children}</div>
       </body>
     </html>
   );
