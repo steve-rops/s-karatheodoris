@@ -18,7 +18,7 @@ export default function Home() {
           <strong>Κωνσταντίνο Καραθεοδωρή</strong>.
         </p>
         <Button size="sm" className="hover:cursor-pointer">
-          Μαθε Περισσότερα
+          Μάθε Περισσότερα
         </Button>
       </div>
     </div>
