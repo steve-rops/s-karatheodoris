@@ -1,3 +1,9 @@
+import CarouselHomePage from "./_components/Carousel";
+
 export default function Home() {
-  return <div>Arxikh</div>;
+  return (
+    <div className="p-2 w-full">
+      <CarouselHomePage />
+    </div>
+  );
 }

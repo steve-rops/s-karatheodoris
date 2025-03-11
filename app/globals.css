@@ -6,11 +6,11 @@
 @import "tailwindcss/utilities";
 
 :root {
-  --background: #f3f2f0;
+  --background: #f9f9f9;
   --foreground: #020202;
-  --card: #f3f2f0;
+  --card: #f9f9f9;
   --card-foreground: #020202;
-  --popover: #f3f2f0;
+  --popover: #f9f9f9;
   --popover-foreground: #020202;
   --primary: #4d191f;
   --primary-foreground: #c9c4bb;
