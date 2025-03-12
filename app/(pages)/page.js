@@ -4,7 +4,7 @@ import CarouselHomePage from "./_components/Carousel";
 export default function Home() {
   return (
     <div className="p-2 w-full space-y-10">
-      <CarouselHomePage />
+      <CarouselHomePage opts={{ loop: true }} />
 
       <div className="space-y-2">
         <h2 className="text-xl font-semibold text-primary">Ο Σύλλογος</h2>
