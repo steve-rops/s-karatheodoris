@@ -1,3 +1,4 @@
+import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 
 export default async function layout({ children }) {
@@ -5,6 +6,7 @@ export default async function layout({ children }) {
     <div>
       <Header />
       <div className="p-4">{children}</div>
+      <Footer />
     </div>
   );
 }

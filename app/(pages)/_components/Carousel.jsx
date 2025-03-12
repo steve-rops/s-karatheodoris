@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
 
 const images = ["/mouseio.jpg", "/parathrhthrio.jpg", "/plateia.jpg"];
 
-export default function CarouselHomePage() {
+export default function CarouselHomePage({ opts }) {
   const [dotIndex, setDotIndex] = useState(0);
   const [api, setApi] = useState(null);
 
@@ -40,11 +40,13 @@ export default function CarouselHomePage() {
   return (
     <Carousel
       setApi={setApi}
-      opts={{ loop: true }}
+      opts={opts}
       className="w-[80%] lg:w-[50%] mx-auto"
       plugins={[
         Autoplay({
-          delay: 5000,
+          delay: 4500,
+          stopOnInteraction: false,
+          stopOnMouseEnter: false,
         }),
       ]}
     >

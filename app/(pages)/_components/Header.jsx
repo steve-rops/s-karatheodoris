@@ -29,20 +29,20 @@ export default function Header() {
   return (
     <div className="w-full">
       {/* social media links */}
-      <div className="bg-primary text-white p-2 flex items-center gap-4">
+      <div className="bg-primary text-[var(--muted)] p-2 flex items-center gap-4">
         <Link
           target="_blank"
           rel="noopener noreferrer"
           href={`https://www.instagram.com/s.karatheodori?igsh=MTNldzlnOGY0bmZ3ZA==`}
         >
-          <InstaIcon color="#89857d" size={24} />
+          <InstaIcon color="var(--muted)" size={24} />
         </Link>
         <Link
           target="_blank"
           rel="noopener noreferrer"
           href={`https://www.facebook.com/share/16B6jDaqTU/`}
         >
-          <FacebookIcon color="#89857d" size={24} />
+          <FacebookIcon color="var(--muted)" size={24} />
         </Link>
         <Link
           href="mailto:skaratheodoris@yahoo.gr"
