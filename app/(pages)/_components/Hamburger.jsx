@@ -41,6 +41,12 @@ export default function Hamburger() {
               <span>Εκδηλώσεις</span>
             </li>
           </Link>
+          <Link onClick={() => setIsOpen(false)} href="/epikinonia">
+            <li className="hover:cursor-pointer hover:text-primary flex gap-2 ">
+              <SquareArrowOutDownLeft className="text-primary" />
+              <span>Επικοινωνία</span>
+            </li>
+          </Link>
         </ul>
       </SheetContent>
     </Sheet>

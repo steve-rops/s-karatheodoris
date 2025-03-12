@@ -7,7 +7,9 @@ export default function Home() {
       <CarouselHomePage opts={{ loop: true }} />
 
       <div className="space-y-2">
-        <h2 className="text-xl font-semibold text-primary">Ο Σύλλογος</h2>
+        <h2 className="text-xl font-semibold text-primary text-center">
+          Ο Σύλλογος
+        </h2>
         <p className="text-sm text-justify">
           Ο Σύλλογος μας ιδρύθηκε το <strong>1977</strong> με έδρα τη Νέα Βύσσα.
           Το όνομα του συλλόγου δόθηκε προς τιμήν του γένους{" "}
@@ -20,6 +22,12 @@ export default function Home() {
         <Button size="sm" className="hover:cursor-pointer">
           Μάθε Περισσότερα
         </Button>
+      </div>
+
+      <div className="space-y-2 bg-muted/35 p-2 rounded-md">
+        <h2 className="text-xl font-semibold text-primary text-center">
+          Εκδηλώσεις
+        </h2>
       </div>
     </div>
   );

@@ -23,6 +23,8 @@ export default function Header() {
       setSelected("drastiriotites");
     } else if (pathname.includes("ekdilosis")) {
       setSelected("ekdilosis");
+    } else if (pathname.includes("epikinonia")) {
+      setSelected("epikinonia");
     }
   }, [pathname]);
 
@@ -122,6 +124,18 @@ export default function Header() {
                 } `}
               >
                 Εκδηλώσεις
+              </li>
+            </Link>
+            <Link href="/epikinonia">
+              <li
+                value="epikinonia"
+                className={`hover:cursor-pointer hover:text-primary ${
+                  selected === "epikinonia"
+                    ? "underline underline-offset-2 decoration-primary"
+                    : ""
+                } `}
+              >
+                Επικοινωνία
               </li>
             </Link>
           </ul>
