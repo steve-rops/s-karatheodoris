@@ -66,8 +66,8 @@ export default function CarouselHomePage({ opts }) {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="hidden lg:block" />
-      <CarouselNext className="hidden lg:block" />
+      <CarouselPrevious className="hidden lg:grid lg:place-items-center" />
+      <CarouselNext className="hidden lg:grid lg:place-items-center" />
       <div className="grid place-items-center p-2">
         <div className="flex gap-2 mx-auto">
           {images.map((_, index) => (
