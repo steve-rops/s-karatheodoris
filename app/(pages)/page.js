@@ -74,12 +74,12 @@ export default function Home() {
           <div className="text-gray-600">
             <p className="underline">Ενημέρωση:</p>
             <p>
-              Θα ακολουθήσει χωρός από τα χωρευτικά τμήματα του Συλλόγου μας,
+              Θα ακολουθήσει χωρός από τα χoρευτικά τμήματα του Συλλόγου μας,
               καθώς και για όλο το κόσμο.
             </p>
           </div>
 
-          <Button className="border-2 border-primary/40" variant="outline">
+          <Button className="border border-primary" variant="outline">
             Λεπτομέριες
           </Button>
         </div>
