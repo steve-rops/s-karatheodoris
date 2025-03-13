@@ -29,7 +29,7 @@ export default function Home() {
         </Link>
       </div>
 
-      <div className="w-full space-y-2 bg-muted/35 p-2 rounded-md">
+      <div className="w-full space-y-4 bg-muted/35 p-2 rounded-md shadow-md">
         <h2 className="text-xl font-semibold text-primary text-center">
           Εκδηλώσεις
         </h2>
@@ -79,7 +79,9 @@ export default function Home() {
             </p>
           </div>
 
-          <Button variant="outline">Λεπτομέριες</Button>
+          <Button className="border-2 border-primary/40" variant="outline">
+            Λεπτομέριες
+          </Button>
         </div>
       </div>
     </div>
