@@ -29,7 +29,7 @@ export default function Home() {
         </Link>
       </div>
 
-      <div className="w-full space-y-2 bg-muted/35 p-2 rounded-md">
+      <div className="w-full space-y-4 bg-muted/35 p-2 rounded-md shadow-md">
         <h2 className="text-xl font-semibold text-primary text-center">
           Εκδηλώσεις
         </h2>
@@ -42,7 +42,7 @@ export default function Home() {
         </div>
 
         <div className="border border-primary/30 bg-background rounded-lg p-4 border-l-4 border-l-green-400 space-y-3 ">
-          <Badge className="bg-green-500 text-black">Προσεχώς</Badge>
+          <Badge className="bg-green-500 text-white">Προσεχώς</Badge>
           <h4 className="text-2xl font-semibold">
             Πανηγύρι Κωνσταντίνου και Ελένης
           </h4>
@@ -79,7 +79,9 @@ export default function Home() {
             </p>
           </div>
 
-          <Button variant="outline">Λεπτομέριες</Button>
+          <Button className="border-2 border-primary/40" variant="outline">
+            Λεπτομέριες
+          </Button>
         </div>
       </div>
     </div>
