@@ -17,6 +17,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import FacebookIcon from "@/public/facebook";
 import { menuLinks } from "@/data";
+import { Button } from "@/components/ui/button";
 
 export default function Header() {
   const pathname = usePathname();
@@ -41,27 +42,35 @@ export default function Header() {
   return (
     <div className="w-full">
       {/* social media links */}
-      <div className="bg-primary text-[var(--muted)] p-2 flex items-center gap-4">
-        <Link
-          target="_blank"
-          rel="noopener noreferrer"
-          href={`https://www.instagram.com/s.karatheodori?igsh=MTNldzlnOGY0bmZ3ZA==`}
-        >
-          <InstaIcon color="var(--muted)" size={24} />
-        </Link>
-        <Link
-          target="_blank"
-          rel="noopener noreferrer"
-          href={`https://www.facebook.com/share/16B6jDaqTU/`}
-        >
-          <FacebookIcon color="var(--muted)" size={24} />
-        </Link>
-        <Link
-          href="mailto:skaratheodoris@yahoo.gr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Mail size={26} className="text-secondary" />
+      <div className="bg-primary flex items-center justify-between p-2">
+        <div className=" text-[var(--muted)] flex items-center gap-4">
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href={`https://www.instagram.com/s.karatheodori?igsh=MTNldzlnOGY0bmZ3ZA==`}
+          >
+            <InstaIcon color="var(--muted)" size={24} />
+          </Link>
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href={`https://www.facebook.com/share/16B6jDaqTU/`}
+          >
+            <FacebookIcon color="var(--muted)" size={24} />
+          </Link>
+          <Link
+            href="mailto:skaratheodoris@yahoo.gr"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Mail size={26} className="text-secondary" />
+          </Link>
+        </div>
+
+        <Link href="#">
+          <Button size="xs" className="p-1 bg-secondary" variant="secondary">
+            Υποστήριξέ μας!
+          </Button>
         </Link>
       </div>
 
