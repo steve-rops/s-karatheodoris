@@ -63,7 +63,7 @@ const MenuItem = ({ href, title, links, setWholeMenuIsOpen }) => {
         href={links.length > 0 ? "" : href}
       >
         <SquareArrowOutDownLeft className="text-primary" />
-        <span className="text-3xl">{title}</span>
+        <span className="text-2xl">{title}</span>
         {links.length > 0 && (
           <ChevronDown
             className={`text-primary transition-transform duration-300 ${
