@@ -1,17 +1,27 @@
 "use client";
 
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import Image from "next/image";
 import InstaIcon from "@/public/insta";
-import { Mail } from "lucide-react";
+import { ChevronDown, Mail } from "lucide-react";
 import Link from "next/link";
 import Hamburger from "./Hamburger";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import FacebookIcon from "@/public/facebook";
+import { menuLinks } from "@/data";
 
 export default function Header() {
   const pathname = usePathname();
   const [selected, setSelected] = useState("");
+  const [submenuIsOpen, setSubmenuIsOpen] = useState(false);
 
   useEffect(() => {
     if (pathname === "/") {
@@ -84,60 +94,37 @@ export default function Header() {
           <Hamburger />
         </div>
 
-        {/* nav links only big screens */}
+        {/* Nav links only for big screens */}
         <div className="hidden lg:block">
-          <ul
-            onClick={(e) => setSelected(e.target.getAttribute("value"))}
-            className="flex justify-center gap-4 text-xs lg:text-lg "
-          >
-            <Link href="/silogos">
+          <ul className="flex justify-center gap-4 text-xs lg:text-lg">
+            {menuLinks.map((el, index) => (
               <li
-                value="silogos"
-                className={`hover:cursor-pointer hover:text-primary ${
-                  selected === "silogos"
-                    ? "underline underline-offset-2 decoration-primary "
-                    : ""
-                } `}
+                key={index}
+                className="relative group hover:text-primary cursor-pointer"
               >
-                Ο Σύλλογος
+                {el.links.length > 0 ? (
+                  <DropdownMenu>
+                    <DropdownMenuTrigger>
+                      <div className="flex items-center gap-2 hover:cursor-pointer hover:text-primary">
+                        <span>{el.title}</span>
+                        <ChevronDown />
+                      </div>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                      {el.links.map((link) => (
+                        <Link key={link.title} href={link.href}>
+                          <DropdownMenuItem className="hover:cursor-pointer hover:bg-accent/30">
+                            {link.title}
+                          </DropdownMenuItem>
+                        </Link>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                ) : (
+                  <Link href={el.href}>{el.title}</Link>
+                )}
               </li>
-            </Link>
-            <Link href="/drastiriotites">
-              <li
-                value="drastiriotites"
-                className={`hover:cursor-pointer hover:text-primary ${
-                  selected === "drastiriotites"
-                    ? "underline underline-offset-2 decoration-primary"
-                    : ""
-                } `}
-              >
-                Δραστηριότητες
-              </li>
-            </Link>
-            <Link href="/ekdilosis">
-              <li
-                value="ekdilosis"
-                className={`hover:cursor-pointer hover:text-primary ${
-                  selected === "ekdilosis"
-                    ? "underline underline-offset-2 decoration-primary"
-                    : ""
-                } `}
-              >
-                Εκδηλώσεις
-              </li>
-            </Link>
-            <Link href="/epikinonia">
-              <li
-                value="epikinonia"
-                className={`hover:cursor-pointer hover:text-primary ${
-                  selected === "epikinonia"
-                    ? "underline underline-offset-2 decoration-primary"
-                    : ""
-                } `}
-              >
-                Επικοινωνία
-              </li>
-            </Link>
+            ))}
           </ul>
         </div>
       </nav>

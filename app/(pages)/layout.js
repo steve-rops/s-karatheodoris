@@ -8,7 +8,6 @@ import Link from "next/link";
 
 export default function Layout({ children }) {
   const pathname = usePathname();
-  console.log(pathname);
 
   return (
     <div>
