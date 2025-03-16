@@ -4,7 +4,7 @@ import { Calendar, Clock, MapPin } from "lucide-react";
 
 export default function EkdiloseisHomePage() {
   return (
-    <div className="w-full space-y-4 bg-muted/35 p-2 py-4 rounded-md shadow-md">
+    <div className="w-full space-y-2 bg-muted/35 p-2 py-4 rounded-md shadow-md">
       <h2 className="text-xl font-semibold text-primary text-center">
         Εκδηλώσεις
       </h2>

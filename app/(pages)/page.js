@@ -1,5 +1,6 @@
 import CarouselHomePage from "./_components/Carousel";
 import DoreesHomePage from "./_components/Dorees-homePage";
+import DrastiriotitesHomePage from "./_components/Drastiriotites-homePage";
 import EkdiloseisHomePage from "./_components/Ekdiloseis-homePage";
 import OsilogosHomePage from "./_components/Osilogos-homePage";
 
@@ -14,6 +15,8 @@ export default function Home() {
         <EkdiloseisHomePage />
 
         <DoreesHomePage />
+
+        <DrastiriotitesHomePage />
       </div>
     </div>
   );

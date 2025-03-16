@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function DoreesHomePage() {
   return (
-    <div className="p-2 py-4 rounded-md border-[0.5px] border-primary/30 space-y-4">
+    <div className="p-2 py-4 rounded-md border-[0.5px] border-primary/30 space-y-2">
       <h2 className="text-xl font-semibold text-primary text-center">
         Υποστήριξέ μας
       </h2>
