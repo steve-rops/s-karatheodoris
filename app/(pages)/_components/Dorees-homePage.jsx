@@ -11,12 +11,6 @@ export default function DoreesHomePage() {
         Η βοήθεια σου, είναι πολύτιμη και απαραίτητη για να διατηρηθεί η
         πολιτιστική μας κληρονομιά. Αν θέλεις στήριξέ μας.
       </p>
-
-      <Link className="flex justify-center" href="#">
-        <Button className="text-white" size="lg">
-          Κάνε Δωρεά
-        </Button>
-      </Link>
     </div>
   );
 }
