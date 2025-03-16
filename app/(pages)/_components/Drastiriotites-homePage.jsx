@@ -13,22 +13,22 @@ export default function DrastiriotitesHomePage() {
       </p>
 
       <div className="grid grid-cols-3 gap-2">
-        <Badge variant="secondary" className="col-span-2 w-full ">
+        <Badge variant="secondary" className=" text-[13px] col-span-2 w-full ">
           Χορευτικό Τμήμα Ενηλίκων
         </Badge>
-        <Badge variant="secondary" className="w-full">
+        <Badge variant="secondary" className=" text-[13px] w-full">
           Χοροδία
         </Badge>
-        <Badge variant="secondary" className="w-full">
+        <Badge variant="secondary" className=" text-[13px] w-full">
           Πανυγήρια
         </Badge>
-        <Badge variant="secondary" className="col-span-2 w-full">
+        <Badge variant="secondary" className=" text-[13px] col-span-2 w-full">
           Χορευτικό Τμήμα Παίδων
         </Badge>
-        <Badge variant="secondary" className="col-span-3 w-full">
+        <Badge variant="secondary" className=" text-[13px] col-span-3 w-full">
           Θεατρικές Παραστάσεις
         </Badge>
-        <Badge variant="secondary" className="col-span-3 w-full">
+        <Badge variant="secondary" className=" text-[13px] col-span-3 w-full">
           Χορευτικό Τμήμα Παραστάσεων
         </Badge>
       </div>
