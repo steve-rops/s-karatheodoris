@@ -9,7 +9,7 @@ export default function Submit() {
     <Button
       type="submit"
       disabled={pending}
-      className={`text-white disabled:bg-gray-500 w-full`}
+      className={`text-white disabled:bg-gray-500 w-full hover:cursor-pointer`}
       size="lg"
     >
       Υποβολή
