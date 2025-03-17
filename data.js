@@ -15,6 +15,7 @@ export const menuLinks = [
         title: "Μουσείο Καραθεοδωρή",
         href: "https://caratheodorymuseumneavyssa.gr/",
       },
+      { title: "Λαογραφικό Μουσείο", href: "" },
     ],
   },
   { title: "Εκδηλώσεις", href: "/ekdilosis", links: [] },
