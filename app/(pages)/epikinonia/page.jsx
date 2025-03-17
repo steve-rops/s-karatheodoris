@@ -161,7 +161,7 @@ export default function EpikinoniaPage() {
         <div className="flex justify-center lg:w-96 mx-auto bg-green-200 border rounded-md border-green-500 p-10">
           <div className="flex flex-col items-center">
             <CheckCircle size={42} className="text-green-700" />
-            <div>Το μήνημα σας στάλθηκε με επιτυχία</div>
+            <div>Το μήνυμα σας στάλθηκε με επιτυχία</div>
           </div>
         </div>
       )}
