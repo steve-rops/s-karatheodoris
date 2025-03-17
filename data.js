@@ -3,7 +3,6 @@ export const menuLinks = [
     title: "Ο Σύλλογος",
     links: [
       { title: "Γενικά", href: "/silogos" },
-      { title: "Ιστορία", href: "/silogos/istoria" },
       { title: "Δραστηριότητες", href: "/silogos/drastiriotites" },
       { title: "Μέλη ΔΣ", href: "/silogos/melhds" },
     ],
@@ -15,6 +14,7 @@ export const menuLinks = [
         title: "Μουσείο Καραθεοδωρή",
         href: "https://caratheodorymuseumneavyssa.gr/",
       },
+      { title: "Λαογραφικό Μουσείο", href: "" },
     ],
   },
   { title: "Εκδηλώσεις", href: "/ekdilosis", links: [] },
