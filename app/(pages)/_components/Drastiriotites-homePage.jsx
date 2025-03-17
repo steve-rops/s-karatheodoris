@@ -17,10 +17,10 @@ export default function DrastiriotitesHomePage() {
           Χορευτικό Τμήμα Ενηλίκων
         </Badge>
         <Badge variant="secondary" className=" text-[13px] w-full">
-          Χοροδία
+          Χορωδία
         </Badge>
         <Badge variant="secondary" className=" text-[13px] w-full">
-          Πανυγήρια
+          Πανηγύρια
         </Badge>
         <Badge variant="secondary" className=" text-[13px] col-span-2 w-full">
           Χορευτικό Τμήμα Παίδων
