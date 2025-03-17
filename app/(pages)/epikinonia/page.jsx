@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Locate, Mail, MapPin, Phone, Pin } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 import Submit from "./_components/Submit";
 import { handleSubmit } from "@/app/actions";
@@ -19,10 +19,13 @@ export default function EpikinoniaPage() {
 
       <div className="text-gray-600 space-y-2 grid place-items-center">
         <div className="flex gap-2 ">
-          <div className=" flex items-center text-sm  gap-1 hover:text-black">
+          <Link
+            href="tel:+302552071515"
+            className=" flex items-center text-sm  gap-1 hover:text-black"
+          >
             <Phone size={16} />
             <span>2552071xxx</span>
-          </div>
+          </Link>
           <div className=" flex items-center  text-sm  gap-1 hover:text-black">
             <Mail size={16} />
             <Link

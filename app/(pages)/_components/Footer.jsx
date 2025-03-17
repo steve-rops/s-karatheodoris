@@ -102,10 +102,16 @@ export default function Footer() {
               >
                 skaratheodoris@yahoo.gr
               </Link>
-              <Link className="text-[var(--muted)] hover:text-white" href="#">
-                tel: 1234567890
+              <Link
+                className="text-[var(--muted)] hover:text-white"
+                href="tel:+302552071515"
+              >
+                tel: +30 25520 71515
               </Link>
-              <Link className="text-[var(--muted)] hover:text-white" href="#">
+              <Link
+                className="text-[var(--muted)] hover:text-white"
+                href="https://maps.app.goo.gl/pZjwGypP2oECv5d58"
+              >
                 Διεύθυνση: Νέα Βύσσα, ΈΒΡΟΣ, 68001
               </Link>
             </div>
