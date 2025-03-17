@@ -4,7 +4,7 @@ export const handleSubmit = async (formData) => {
   const baseURL =
     process.env.NODE_ENV !== "production"
       ? process.env.ENV_BASE_URL
-      : PRODUCTION_BASE_URL;
+      : process.env.PRODUCTION_BASE_URL;
 
   console.log(baseURL);
 
