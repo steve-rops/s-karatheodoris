@@ -1,12 +1,23 @@
-import { Button } from "@/components/ui/button";
-import { Mail, MapPin, Phone } from "lucide-react";
+"use client";
+
+import { CheckCircle, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 import Submit from "./_components/Submit";
 import { handleSubmit } from "@/app/actions";
 import InstaIcon from "@/public/insta";
 import FacebookIcon from "@/public/facebook";
+import { useState } from "react";
 
 export default function EpikinoniaPage() {
+  const [subStatus, setSubStatus] = useState();
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const res = await handleSubmit(formData);
+    setSubStatus(res.status);
+  };
+
   return (
     <div className="space-y-10 w-full">
       <div>
@@ -24,7 +35,7 @@ export default function EpikinoniaPage() {
             className=" flex items-center text-sm  gap-1 hover:text-black"
           >
             <Phone size={16} />
-            <span>2552071xxx</span>
+            <span>2552071515</span>
           </Link>
           <div className=" flex items-center  text-sm  gap-1 hover:text-black">
             <Mail size={16} />
@@ -41,7 +52,7 @@ export default function EpikinoniaPage() {
         <div className="flex gap-1 items-center">
           <MapPin size={16} />
           <Link
-            className="text-sm"
+            className="text-sm hover:text-black"
             href="https://maps.app.goo.gl/pZjwGypP2oECv5d58"
             target="_blank"
             rel="noopener noreferrer"
@@ -78,71 +89,98 @@ export default function EpikinoniaPage() {
         </div>
       </div>
 
-      <div className=" lg:w-96 mx-auto flex justify-center flex-col ">
-        <h3 className="text-primary text-lg">Στείλε μας ένα μήνυμα</h3>
-        <form
-          action={handleSubmit}
-          className="max-w-lg  border-[0.5px] border-primary/50 rounded-md p-3  shadow-lg space-y-4"
-        >
-          <div className="flex flex-col">
-            <label htmlFor="name" className="text-gray-700 font-medium">
-              Όνομα:
-            </label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              required
-              className="mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
-              placeholder="Πληκτρολογήστε το όνομά σας"
-            />
-          </div>
+      {!subStatus && (
+        <div className=" lg:w-96 mx-auto flex justify-center flex-col ">
+          <h3 className="text-primary text-lg">Στείλε μας ένα μήνυμα</h3>
+          <form
+            onSubmit={onSubmit}
+            className="max-w-lg  border-[0.5px] border-primary/50 rounded-md p-3  shadow-lg space-y-4"
+          >
+            <div className="flex flex-col">
+              <label htmlFor="name" className="text-gray-700 font-medium">
+                Όνομα:
+              </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                required
+                className="mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
+                placeholder="Πληκτρολογήστε το όνομά σας"
+              />
+            </div>
 
-          <div className="flex flex-col">
-            <label htmlFor="lastname" className="text-gray-700 font-medium">
-              Επίθετο:
-            </label>
-            <input
-              type="text"
-              name="lastname"
-              id="lastname"
-              required
-              className="mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
-              placeholder="Πληκτρολογήστε το όνομά σας"
-            />
-          </div>
+            <div className="flex flex-col">
+              <label htmlFor="surname" className="text-gray-700 font-medium">
+                Επίθετο:
+              </label>
+              <input
+                type="text"
+                name="surname"
+                id="surname"
+                required
+                className="mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
+                placeholder="Πληκτρολογήστε το επίθετό σας"
+              />
+            </div>
 
-          <div className="flex flex-col">
-            <label htmlFor="email" className="text-gray-700 font-medium">
-              Email:
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              required
-              className="mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
-              placeholder="your@email.com"
-            />
-          </div>
+            <div className="flex flex-col">
+              <label htmlFor="email" className="text-gray-700 font-medium">
+                Email:
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                className="mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
+                placeholder="your@email.com"
+              />
+            </div>
 
-          <div className="flex flex-col">
-            <label htmlFor="message" className="text-gray-700 font-medium">
-              Μήνυμα:
-            </label>
-            <textarea
-              name="message"
-              id="message"
-              required
-              rows="4"
-              className="mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
-              placeholder="Γράψτε το μήνυμά σας εδώ..."
-            ></textarea>
-          </div>
+            <div className="flex flex-col">
+              <label htmlFor="message" className="text-gray-700 font-medium">
+                Μήνυμα:
+              </label>
+              <textarea
+                name="message"
+                id="message"
+                required
+                rows="4"
+                className="mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
+                placeholder="Γράψτε το μήνυμά σας εδώ..."
+              ></textarea>
+            </div>
 
-          <Submit />
-        </form>
-      </div>
+            <Submit type="submit" />
+          </form>
+        </div>
+      )}
+
+      {subStatus === "success" && (
+        <div className="flex justify-center lg:w-96 mx-auto bg-green-200 border rounded-md border-green-500 p-10">
+          <div className="flex flex-col items-center">
+            <CheckCircle size={42} className="text-green-700" />
+            <div>Το μήνημα σας στάλθηκε με επιτυχία</div>
+          </div>
+        </div>
+      )}
+
+      {subStatus === "error" && (
+        <div className="p-10 flex lg:w-96 mx-auto justify-center bg-red-200 border border-red-500 rounded-md">
+          <div className="flex flex-col items-center">
+            <div className="font-bold">Ουπς, κάτι πήγε λάθος</div>
+            <p className="text-sm">Παρακαλούμε επικοινωνήστε μαζί μας στο</p>
+            <Link
+              href="mailto:skaratheodoris@yahoo.gr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              skaratheodoris@yahoo.gr
+            </Link>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

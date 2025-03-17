@@ -1,25 +1,31 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-// const resend = new Resend(process.env.RESEND_KEY);
-const resend = new Resend("re_aR6opdv5_L8GB5Dp3YwumSrYTmfciPb1r");
+const resend = new Resend(`${process.env.RESEND_KEY}`);
 
 export async function POST(req) {
   try {
     const { name, surname, email, message } = await req.json();
 
-    console.log(email);
+    if (!name || !surname || !email)
+      return NextResponse.json({ status: 500, error: "error" });
 
-    // const { data, error } = await resend.emails.send({
-    //   from: "onboarding@resend.dev",
-    //   to: "somebiss@gmail.com",
-    //   subject: "Hello World",
-    //   html: "<p>Congrats on sending your <strong>first email</strong>!</p>",
-    // });
+    const { data, error } = await resend.emails.send({
+      from: "onboarding@resend.dev",
+      to: "somebiss@gmail.com",
+      subject: `New Contact Form Submission from ${name}`,
+      html: `
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Surname:</strong> ${surname}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Message:</strong></p>
+      <p>${message}</p>
+    `,
+    });
 
-    // if (error) {
-    //   return NextResponse.json({ error }, { status: 500 });
-    // }
+    if (error) {
+      return NextResponse.json({ error }, { status: 500 });
+    }
 
     return NextResponse.json({ status: 200, message: "sent success" });
   } catch (error) {

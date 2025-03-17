@@ -1,6 +1,13 @@
 "use server";
 
 export const handleSubmit = async (formData) => {
+  const baseURL =
+    process.env.NODE_ENV !== "production"
+      ? process.env.ENV_BASE_URL
+      : PRODUCTION_BASE_URL;
+
+  console.log(baseURL);
+
   const submisionData = {
     name: formData.get("name"),
     surname: formData.get("surname"),
@@ -9,16 +16,13 @@ export const handleSubmit = async (formData) => {
   };
 
   try {
-    const { data, error } = await fetch(
-      "http://localhost:3000/api/epikinonia-form",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(submisionData),
-      }
-    );
+    const res = await fetch(`${baseURL}/api/epikinonia-form`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(submisionData),
+    });
 
-    if (error) throw new Error(error);
+    return { status: res.ok ? "success" : "error" };
   } catch (error) {
     console.error(error);
   }
