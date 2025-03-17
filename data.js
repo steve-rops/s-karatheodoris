@@ -5,9 +5,20 @@ export const menuLinks = [
       { title: "Γενικά", href: "/silogos" },
       { title: "Ιστορία", href: "/silogos/istoria" },
       { title: "Δραστηριότητες", href: "/silogos/drastiriotites" },
+      { title: "Μέλη ΔΣ", href: "/silogos/melhds" },
+    ],
+  },
+  {
+    title: "Μουσεία",
+    links: [
+      {
+        title: "Μουσείο Καραθεοδωρή",
+        href: "https://caratheodorymuseumneavyssa.gr/",
+      },
     ],
   },
   { title: "Εκδηλώσεις", href: "/ekdilosis", links: [] },
+  { title: "Ο Τόπος μας", href: "/otoposmas", links: [] },
   { title: "Επικοινωνία", href: "/epikinonia", links: [] },
 ];
 
