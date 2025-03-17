@@ -31,7 +31,7 @@ export default function Hamburger() {
         <SheetHeader>
           <SheetTitle className="text-primary">Μενού</SheetTitle>
         </SheetHeader>
-        <div className="flex-col justify-center pl-2 space-y-3 ">
+        <div className="flex-col justify-center pl-4 space-y-3 ">
           {menuLinks.map((el) => (
             <MenuItem
               href={el.href}
@@ -62,8 +62,7 @@ const MenuItem = ({ href, title, links, setWholeMenuIsOpen }) => {
         onClick={handleClick}
         href={links.length > 0 ? "" : href}
       >
-        <SquareArrowOutDownLeft className="text-primary" />
-        <span className="text-2xl">{title}</span>
+        <span className="text-xl">{title}</span>
         {links.length > 0 && (
           <ChevronDown
             className={`text-primary transition-transform duration-300 ${
@@ -77,12 +76,10 @@ const MenuItem = ({ href, title, links, setWholeMenuIsOpen }) => {
           {links.map((el) => (
             <Link
               key={el.title}
-              className="flex gap-2 items-center hover:text-primary hover:cursor-pointer text-xl"
+              className="flex gap-2 items-center hover:text-primary hover:cursor-pointer text-lg"
               onClick={() => setWholeMenuIsOpen((open) => !open)}
               href={el.href}
             >
-              <SquareArrowOutDownLeft size={16} className="text-primary" />
-
               {el.title}
             </Link>
           ))}
