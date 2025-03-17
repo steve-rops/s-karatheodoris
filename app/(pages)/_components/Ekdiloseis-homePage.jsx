@@ -18,7 +18,7 @@ export default function EkdiloseisHomePage() {
 
       <div className="lg:w-[50%] mx-auto border border-primary/30 bg-background rounded-lg p-4 border-l-4 border-l-green-400 space-y-3 ">
         <Badge className="bg-green-500 text-white">Προσεχώς</Badge>
-        <h4 className="text-2xl font-semibold">
+        <h4 className="text-[18px] font-semibold">
           Πανηγύρι Κωνσταντίνου και Ελένης
         </h4>
 
