@@ -1,19 +1,40 @@
+import Image from "next/image";
+
 export default function SilogosPage() {
   return (
     <div className="space-y-10">
       <div className="space-y-4">
         <h1 className="text-2xl text-primary text-center">Ο Σύλλογος</h1>
-        <p className="text-justify">
-          Ο{" "}
-          <strong>
-            Πολιτιστικός Σύλλογος Νέας Βύσσας «Στέφανος Καραθεοδωρής»
-          </strong>{" "}
-          ιδρύθηκε το
-          <strong> 1977</strong> με σκοπό τη διάσωση, διατήρηση και διάδοση της
-          πολιτισμικής κληρονομιάς των προσφύγων προγόνων της περιοχής στις νέες
-          γενιές. Στα χρόνια που ακολούθησαν, ο σύλλογος επεκτάθηκε σε
-          κοινωνικούς, ενημερωτικούς και ψυχαγωγικούς τομείς, συμβάλλοντας στην
-          πολιτιστική και ποιοτική άνοδο της τοπικής κοινωνίας.
+        <div className="flex w-full lg: items-center">
+          <p className="text-pretty">
+            Ο{" "}
+            <strong>
+              Πολιτιστικός Σύλλογος Νέας Βύσσας «Στέφανος Καραθεοδωρής»
+            </strong>{" "}
+            ιδρύθηκε το
+            <strong> 1977</strong> με σκοπό τη διάσωση, διατήρηση και διάδοση
+            της πολιτισμικής κληρονομιάς των προσφύγων προγόνων της περιοχής
+            στις νέες γενιές.
+            <p className="text-justify hidden lg:block">
+              Στα χρόνια που ακολούθησαν, ο σύλλογος επεκτάθηκε σε κοινωνικούς,
+              ενημερωτικούς και ψυχαγωγικούς τομείς, συμβάλλοντας στην
+              πολιτιστική και ποιοτική άνοδο της τοπικής κοινωνίας.
+            </p>
+          </p>
+          <div className="w-[1200px] relative h-[200px] lg:w-[300px] lg:h-[150px]">
+            <Image
+              src="/o-silogos/osilogos-1.png"
+              fill
+              objectFit="cover"
+              className="absolute"
+              alt="karatheodoris sculpture"
+            />
+          </div>
+        </div>
+        <p className="text-justify lg:hidden">
+          Στα χρόνια που ακολούθησαν, ο σύλλογος επεκτάθηκε σε κοινωνικούς,
+          ενημερωτικούς και ψυχαγωγικούς τομείς, συμβάλλοντας στην πολιτιστική
+          και ποιοτική άνοδο της τοπικής κοινωνίας.
         </p>
         <p className="text-justify">
           Το όνομα του Συλλόγου δόθηκε{" "}

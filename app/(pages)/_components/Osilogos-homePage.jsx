@@ -16,7 +16,7 @@ export default function OsilogosHomePage() {
         αποκορύφωμα τον μαθηματικό διεθνούς φήμης{" "}
         <strong>Κωνσταντίνο Καραθεοδωρή</strong>.
       </p>
-      <Link className="flex justify-center" href="/silogos/istoria">
+      <Link className="flex justify-center" href="/silogos">
         <Button size="sm" className="hover:cursor-pointer">
           Μάθε Περισσότερα
         </Button>
