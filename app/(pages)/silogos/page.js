@@ -2,11 +2,11 @@ import Image from "next/image";
 
 export default function SilogosPage() {
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 lg:max-w-[800px] lg:mx-auto">
       <div className="space-y-4">
         <h1 className="text-2xl text-primary text-center">Ο Σύλλογος</h1>
-        <div className="flex w-full lg: items-center">
-          <p className="text-pretty">
+        <div className="flex w-full lg:items-center">
+          <div className="text-pretty">
             Ο{" "}
             <strong>
               Πολιτιστικός Σύλλογος Νέας Βύσσας «Στέφανος Καραθεοδωρής»
@@ -20,7 +20,7 @@ export default function SilogosPage() {
               ενημερωτικούς και ψυχαγωγικούς τομείς, συμβάλλοντας στην
               πολιτιστική και ποιοτική άνοδο της τοπικής κοινωνίας.
             </p>
-          </p>
+          </div>
           <div className="w-[1200px] relative h-[200px] lg:w-[300px] lg:h-[150px]">
             <Image
               src="/o-silogos/osilogos-1.png"
@@ -54,7 +54,7 @@ export default function SilogosPage() {
 
       <div className="space-y-4">
         <h2 className="text-2xl text-primary text-center">Οι Στόχοι μας</h2>
-        <p className="text-justify">
+        <div className="text-justify">
           Στόχοι του Συλλόγου, εκτός από την ανάδειξη της προσωπικότητας και του
           πολυσήμαντου και ογκώδους έργου του μεγάλου επιστήμονα{" "}
           <strong> Στέφανου Καραθεοδωρή </strong> και γενικά του γένους
@@ -79,7 +79,64 @@ export default function SilogosPage() {
               νέων.
             </li>
           </ul>
+        </div>
+        <p className="text-justify">
+          Για την επίτευξη των παραπάνω στόχων ο Πολιτιστικός Σύλλογος Νέας
+          Βύσσας «Στέφανος Καραθεοδωρής» έχει να επιδείξει πλούσια δραστηριότητα
+          με πολιτιστικές εκδηλώσεις, αναβίωση παραδοσιακών εθίμων, δράσεις για
+          την ανάδειξη του έργου των Καραθεοδωρή στο πλαίσιο λειτουργίας του
+          Μουσείου των Καραθεοδωρή, εκπαιδευτικά προγράμματα με μαθήματα
+          παραδοσιακών χορών σε παιδιά και ενήλικες, κοινωνικές και εθελοντικές
+          δράσεις αλλά και δράσεις συνεργασίας και δικτύωσης με φορείς και
+          άλλους συλλόγους.
         </p>
+      </div>
+
+      <div className="space-y-4">
+        <h2 className="text-2xl text-primary text-center">Εκδηλώσεις</h2>
+        <p className="text-justify">
+          Ετήσιες εκδηλώσεις που διοργανώνει ο σύλλογος περιλαμβάνουν το{" "}
+          <strong>ετήσιο μνημόσυνο του Κωνσταντίνου Καραθεοδωρή </strong>, το{" "}
+          <strong>έθιμο του Μπέη</strong>,
+          <strong> εκδηλώσεις την Καθαρά Δευτέρα</strong>, το{" "}
+          <strong>πανηγύρι των Αγίων Κωνσταντίνου και Ελένης</strong> και τα{" "}
+          <strong>«Βύσσεια»</strong>.
+        </p>
+        <p>
+          Επίσης μια από τις σπουδαιότερες εκδηλώσεις που έχει διοργανώσει είναι
+          το <strong>Παγκόσμιο Μαθηματικό Συνέδριο</strong>, το οποίο
+          πραγματοποιήθηκε με μεγάλη επιτυχία το 2000 στη Νέα Βύσσα.
+        </p>
+      </div>
+
+      {/* Συνεργασίες */}
+      <div className="space-y-4">
+        <h2 className="text-2xl text-primary text-center">Συνεργασίες</h2>
+        <p>
+          Ο σύλλογος συνεργάζεται με πολιτιστικούς συλλόγους και φορείς από την
+          ευρύτερη περιοχή του Έβρου αλλά και από όλη την Ελλάδα, έχοντας
+          συμμετάσχει σε διάφορες εκδηλώσεις τόσο εντός (Μέγαρο Μουσικής,
+          Ηρώδειο, Επίδαυρος, Αρχαία Ολυμπία, Λυκαβηττό) όσο και εκτός Ελλάδας,
+          σε χώρες όπως η Βουλγαρία, η Γερμανία, η Τουρκία και η Αίγυπτος.{" "}
+        </p>
+        <p>
+          Ο σύλλογος συνεργάζεται, ακόμη, στενά με όλους τους φορείς του Δήμου
+          Ορεστιάδας και της Περιφέρειας Ανατολικής Μακεδονίας και Θράκης,
+          λαμβάνοντας ηθική και υλική υποστήριξη σε όλους τους τομείς της
+          λειτουργίας του. Τα μέλη του και οι δημότες της Νέας Βύσσας
+          υποστηρίζουν ενεργά τις εκδηλώσεις και τις δραστηριότητές του.
+        </p>
+        <div className="w-full">
+          <div className="relative w-full h-56 lg:w-[500px] lg:mx-auto">
+            <Image
+              src="/o-silogos/osilogos-2.jpg"
+              fill
+              objectFit="cover"
+              className="absolute"
+              alt="o-silogos-image"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
