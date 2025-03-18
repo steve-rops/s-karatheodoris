@@ -5,7 +5,7 @@ export default function SilogosPage() {
     <div className="space-y-10 lg:max-w-[800px] lg:mx-auto">
       <div className="space-y-4">
         <h1 className="text-2xl text-primary text-center">Ο Σύλλογος</h1>
-        <div className="flex w-full lg:items-center">
+        <div className="flex w-full items-center">
           <div className="text-pretty">
             Ο{" "}
             <strong>
@@ -23,6 +23,7 @@ export default function SilogosPage() {
           </div>
           <div className="w-[1200px] relative h-[200px] lg:w-[300px] lg:h-[150px]">
             <Image
+              priority
               src="/o-silogos/osilogos-1.png"
               fill
               objectFit="cover"
