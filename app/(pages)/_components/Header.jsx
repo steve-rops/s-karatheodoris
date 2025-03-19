@@ -4,8 +4,6 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Image from "next/image";
@@ -13,32 +11,11 @@ import InstaIcon from "@/public/insta";
 import { ChevronDown, Mail } from "lucide-react";
 import Link from "next/link";
 import Hamburger from "./Hamburger";
-import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
 import FacebookIcon from "@/public/facebook";
 import { menuLinks } from "@/data";
 import { Button } from "@/components/ui/button";
 
 export default function Header() {
-  const pathname = usePathname();
-  const [selected, setSelected] = useState("");
-  const [submenuIsOpen, setSubmenuIsOpen] = useState(false);
-
-  useEffect(() => {
-    if (pathname === "/") {
-      setSelected("");
-    }
-    if (pathname.includes("silogos")) {
-      setSelected("silogos");
-    } else if (pathname.includes("drastiriotites")) {
-      setSelected("drastiriotites");
-    } else if (pathname.includes("ekdilosis")) {
-      setSelected("ekdilosis");
-    } else if (pathname.includes("epikinonia")) {
-      setSelected("epikinonia");
-    }
-  }, [pathname]);
-
   return (
     <div className="w-full">
       {/* social media links */}
@@ -68,7 +45,11 @@ export default function Header() {
         </div>
 
         <Link href="#">
-          <Button size="xs" className="p-1 bg-secondary" variant="secondary">
+          <Button
+            size="sm"
+            className="p-1 bg-accent font-semibold"
+            variant="secondary"
+          >
             Υποστήριξέ μας!
           </Button>
         </Link>
@@ -122,7 +103,7 @@ export default function Header() {
                     <DropdownMenuContent>
                       {el.links.map((link) => (
                         <Link key={link.title} href={link.href}>
-                          <DropdownMenuItem className="hover:cursor-pointer hover:bg-accent/30">
+                          <DropdownMenuItem className="hover:cursor-pointer">
                             {link.title}
                           </DropdownMenuItem>
                         </Link>

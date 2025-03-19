@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function SilogosPage() {
   return (
-    <div className="space-y-10 lg:max-w-[800px] lg:mx-auto">
+    <div className="space-y-10 lg:max-w-[65%] lg:mx-auto">
       <div className="space-y-4">
         <h1 className="text-2xl text-primary text-center">Ο Σύλλογος</h1>
         <div className="flex w-full items-center">

@@ -12,9 +12,9 @@ export const menuLinks = [
     links: [
       {
         title: "Μουσείο Καραθεοδωρή",
-        href: "https://caratheodorymuseumneavyssa.gr/",
+        href: "/mouseio-karatheodori",
       },
-      { title: "Λαογραφικό Μουσείο", href: "" },
+      { title: "Λαογραφικό Μουσείο", href: "/mouseio-laografiko" },
     ],
   },
   { title: "Εκδηλώσεις", href: "/ekdilosis", links: [] },

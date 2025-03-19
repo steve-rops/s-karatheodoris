@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function OtoposmasPage() {
   return (
-    <div className="lg:max-w-[800px] lg:mx-auto space-y-4">
+    <div className="lg:max-w-[65%] lg:mx-auto space-y-4">
       <h1 className="text-2xl text-primary text-center">Ο Τόπος μας</h1>
       <p className="text-justify">
         Η <strong>Νέα Βύσσα</strong> είναι ένα χωριό που βρίσκεται στο
@@ -12,7 +12,7 @@ export default function OtoposmasPage() {
         ομιλία ως Μπόσνα/Bosna.
       </p>
 
-      <div className="relative w-full h-56 lg:w-[500px] lg:mx-auto">
+      <div className="relative w-full h-72 lg:w-[500px] lg:mx-auto">
         <Image
           priority
           src="/o-topos-mas/otoposmas-1.png"
@@ -42,6 +42,17 @@ export default function OtoposmasPage() {
         περιοχή, αλλα και να αναπτύξει ποικίλες σχέσεις με την πόλη της
         Ορεστιάδας και τα υπόλοιπα χωριά της περιοχής.
       </p>
+
+      <div className="relative w-full h-80 lg:w-[500px] lg:mx-auto">
+        <Image
+          priority
+          src="/o-topos-mas/otoposmas-2.webp"
+          fill
+          objectFit="cover"
+          className="absolute"
+          alt="o-silogos-image"
+        />
+      </div>
 
       <p className="text-justify">
         Η τεχνική δόμησης των σπιτιών στη Νέα Βύσσα αντικατοπτρίζει έντονα την
