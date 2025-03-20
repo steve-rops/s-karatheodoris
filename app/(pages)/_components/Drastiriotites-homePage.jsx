@@ -12,24 +12,17 @@ export default function DrastiriotitesHomePage() {
         Κάποιες από τις δραστηριότητες του συλλόγου μας.
       </p>
 
-      <div className="grid grid-cols-3 gap-2">
+      <div className="space-y-2 gap-2 w-[75%] lg:w-[50%] mx-auto">
         <Badge variant="secondary" className=" text-[13px] col-span-2 w-full ">
           Χορευτικό Τμήμα Ενηλίκων
         </Badge>
-        <Badge variant="secondary" className=" text-[13px] w-full">
-          Χορωδία
-        </Badge>
-        <Badge variant="secondary" className=" text-[13px] w-full">
-          Πανηγύρια
-        </Badge>
+
         <Badge variant="secondary" className=" text-[13px] col-span-2 w-full">
-          Χορευτικό Τμήμα Παίδων
+          Δύο Χορευτικά Τμήματα Παίδων
         </Badge>
+
         <Badge variant="secondary" className=" text-[13px] col-span-3 w-full">
-          Θεατρικές Παραστάσεις
-        </Badge>
-        <Badge variant="secondary" className=" text-[13px] col-span-3 w-full">
-          Χορευτικό Τμήμα Παραστάσεων
+          Χορευτικό Τμήμα Εφήβων
         </Badge>
       </div>
       <div className="flex justify-center">
