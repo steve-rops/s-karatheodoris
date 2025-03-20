@@ -69,10 +69,10 @@ export default function Header() {
           </Link>
           <Link href="/">
             <div className={`text-center  `}>
-              <h1 className="text-[10px] lg:text-[14px] ">
+              <h1 className="text-[10px] lg:text-[12px] ">
                 Πολιτιστικός Σύλλογος Νέας Βύσσας
               </h1>
-              <span className="text-sm lg:text-xl font-semibold text-primary">
+              <span className="text-sm lg:text-[16px] font-semibold text-primary">
                 &quot;Στέφανος Καραθεοδωρής&quot;
               </span>
             </div>
@@ -86,7 +86,7 @@ export default function Header() {
 
         {/* Nav links only for big screens */}
         <div className="hidden lg:block">
-          <ul className="flex justify-center gap-4 text-xs lg:text-lg">
+          <ul className="flex justify-center gap-4 lg:text-[15px] ">
             {menuLinks.map((el, index) => (
               <li
                 key={index}
