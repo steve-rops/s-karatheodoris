@@ -7,7 +7,7 @@ export const EkdilosisList = async () => {
   return (
     <div className="space-y-2">
       {data.map((ev) => (
-        <EventItem event={ev} />
+        <EventItem key={ev.title} event={ev} />
       ))}
     </div>
   );
@@ -17,8 +17,8 @@ export const EkdilosisListSkeleton = () => {
   const arr = Array.from({ length: 5 }).map((_, i) => i);
   return (
     <div className="space-y-2">
-      {arr.map(() => (
-        <Skeleton className="w-full h-8 rounded-md" />
+      {arr.map((el) => (
+        <Skeleton key={el} className="w-full h-8 rounded-md" />
       ))}
     </div>
   );
