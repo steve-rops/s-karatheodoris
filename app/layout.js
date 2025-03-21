@@ -6,6 +6,13 @@ const poppins = Poppins({ weight: ["200", "400", "700"], subsets: ["latin"] });
 export const metadata = {
   title: "s-karatheodoris",
   description: "Η ιστοσελίδα του Συλλλόγου Νέας Βύσσας 'Στέφανος Καραθεοδωρής'",
+  keywords: [
+    "karatheodoris",
+    "Stefanos Karatheodoris",
+    "Καραθεοδωρης",
+    "Καραθεοδωρής",
+    "Στεφανος Καραθεοδωρης",
+  ],
 };
 
 export default function RootLayout({ children }) {

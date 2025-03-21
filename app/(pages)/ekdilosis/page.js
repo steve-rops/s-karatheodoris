@@ -1,7 +1,17 @@
+import { Suspense } from "react";
+import {
+  EkdilosisList,
+  EkdilosisListSkeleton,
+} from "./_components/EkdilosisList";
+
 export default function EkdilosisPage() {
   return (
-    <div className="space-y-4">
+    <div className="lg:max-w-[65%] lg:mx-auto space-y-10">
       <h1 className="text-2xl text-primary text-center">Εκδηλώσεις</h1>
+
+      <Suspense fallback={<EkdilosisListSkeleton />}>
+        <EkdilosisList />
+      </Suspense>
     </div>
   );
 }

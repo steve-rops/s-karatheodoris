@@ -24,6 +24,7 @@ export const menuLinks = [
 
 export const events = [
   {
+    category: "main",
     title: "Πανηγύρι Κωνσταντίνου και Ελένης",
     location: "https://maps.app.goo.gl/8H5vutRsKAqNFoLZA",
     startDate: new Date("05/21/2025"),
@@ -33,6 +34,42 @@ export const events = [
     details: "",
     notice:
       "Θα ακολουθήσει χορός από τα χoρευτικά τμήματα του Συλλόγου μας, καθώς και για όλο το κόσμο.",
+    status: "ok",
+  },
+  {
+    category: "main",
+    title: "Βύσσεια 2025",
+    location: "",
+    startDate: new Date("07/26/2025"),
+    endDate: new Date("07/30/2025"),
+    startTime: "19:00",
+    endTime: "01:00",
+    details: "",
+    notice: "",
+    status: "ok",
+  },
+  {
+    category: "main",
+    title: "Καθαρά Δευτέρα",
+    location: "https://maps.app.goo.gl/8H5vutRsKAqNFoLZA",
+    startDate: new Date("03/21/2025"),
+    endDate: new Date("03/21/2025"),
+    startTime: "07:00",
+    endTime: "18:00",
+    details: "",
+    notice: "",
+    status: "ok",
+  },
+  {
+    category: "main",
+    title: "Μπέης 2026",
+    location: "https://maps.app.goo.gl/8H5vutRsKAqNFoLZA",
+    startDate: new Date("03/21/2025"),
+    endDate: new Date("03/21/2025"),
+    startTime: "07:00",
+    endTime: "18:00",
+    details: "",
+    notice: "",
     status: "ok",
   },
 ];

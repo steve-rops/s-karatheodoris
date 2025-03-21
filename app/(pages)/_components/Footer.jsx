@@ -1,6 +1,6 @@
 import FacebookIcon from "@/public/facebook";
 import InstaIcon from "@/public/insta";
-import { Mail } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -93,26 +93,31 @@ export default function Footer() {
           {/* Contact Section */}
           <div className="w-full flex flex-col items-center">
             <h3 className="text-xl mx-auto font-semibold mb-4">Επικοινωνία</h3>
-            <div className=" flex flex-col">
+            <div className=" flex gap-2 lg:flex-col">
               <Link
-                className="text-[var(--muted)] hover:text-white"
+                className="text-[var(--muted)] hover:text-white flex gap-1 items-center"
                 href="mailto:skaratheodoris@yahoo.gr"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                skaratheodoris@yahoo.gr
+                <Mail />
+                <span className="hidden lg:block">skaratheodoris@yahoo.gr</span>
               </Link>
               <Link
-                className="text-[var(--muted)] hover:text-white"
+                className="text-[var(--muted)] hover:text-white flex gap-1 items-center"
                 href="tel:+302552071515"
               >
-                tel: +30 25520 71515
+                <Phone />
+                <span className="hidden lg:block">+302552071515</span>
               </Link>
               <Link
-                className="text-[var(--muted)] hover:text-white"
+                className="text-[var(--muted)] hover:text-white flex gap-1 items-center"
                 href="https://maps.app.goo.gl/pZjwGypP2oECv5d58"
               >
-                Διεύθυνση: Νέα Βύσσα, ΈΒΡΟΣ, 68001
+                <MapPin />
+                <span className="hidden lg:block">
+                  Διεύθυνση: Νέα Βύσσα Ορεστιάδας, 68001
+                </span>
               </Link>
             </div>
           </div>
