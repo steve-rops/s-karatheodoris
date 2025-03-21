@@ -5,23 +5,26 @@ export default function SilogosPage() {
     <div className="space-y-10 lg:max-w-[65%] lg:mx-auto">
       <div className="space-y-4">
         <h1 className="text-2xl text-primary text-center">Ο Σύλλογος</h1>
-        <div className="flex w-full items-center">
-          <div className="text-pretty">
-            Ο{" "}
-            <strong>
-              Πολιτιστικός Σύλλογος Νέας Βύσσας «Στέφανος Καραθεοδωρής»
-            </strong>{" "}
-            ιδρύθηκε το
-            <strong> 1977</strong> με σκοπό τη διάσωση, διατήρηση και διάδοση
-            της πολιτισμικής κληρονομιάς των προσφύγων προγόνων της περιοχής
-            στις νέες γενιές.
+        <div className="flex w-full items-center lg:gap-10">
+          <div className="lg:text-justify space-y-2">
+            <div className="">
+              Ο{" "}
+              <strong>
+                Πολιτιστικός Σύλλογος Νέας Βύσσας «Στέφανος Καραθεοδωρής»
+              </strong>{" "}
+              ιδρύθηκε το
+              <strong> 1977</strong> με σκοπό τη διάσωση, διατήρηση και διάδοση
+              της πολιτισμικής κληρονομιάς των προσφύγων προγόνων της περιοχής
+              στις νέες γενιές.
+            </div>
             <p className="text-justify hidden lg:block">
               Στα χρόνια που ακολούθησαν, ο σύλλογος επεκτάθηκε σε κοινωνικούς,
               ενημερωτικούς και ψυχαγωγικούς τομείς, συμβάλλοντας στην
               πολιτιστική και ποιοτική άνοδο της τοπικής κοινωνίας.
             </p>
           </div>
-          <div className="w-[1200px] relative h-[200px] lg:w-[300px] lg:h-[150px]">
+
+          <div className="w-[1200px] relative h-[200px] lg:w-[450px] lg:h-[270px] ">
             <Image
               priority
               src="/o-silogos/osilogos-1.png"

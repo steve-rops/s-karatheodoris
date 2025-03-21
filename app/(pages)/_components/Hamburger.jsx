@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  AlignJustify,
-  ChevronDown,
-  SquareArrowOutDownLeft,
-} from "lucide-react";
+import { AlignJustify, ChevronDown } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -50,38 +46,40 @@ export default function Hamburger() {
 const MenuItem = ({ href, title, links, setWholeMenuIsOpen }) => {
   const [submenuIsOpen, setSubmenuIsOpen] = useState(false);
 
-  const handleClick = () => {
-    if (links.length === 0) setWholeMenuIsOpen((open) => !open);
-    setSubmenuIsOpen((isOpen) => !isOpen);
-  };
-
   return (
-    <div key={title}>
-      <Link
-        className="flex gap-2 items-center hover:text-primary hover:cursor-pointer "
-        onClick={handleClick}
-        href={links.length > 0 ? "" : href}
-      >
-        <span className="text-xl">{title}</span>
-        {links.length > 0 && (
+    <div>
+      {links.length > 0 ? (
+        <div
+          className="flex gap-2 items-center hover:text-primary hover:cursor-pointer "
+          onClick={() => setSubmenuIsOpen((open) => !open)}
+        >
+          <span className="text-xl">{title}</span>
           <ChevronDown
             className={`text-primary transition-transform duration-300 ${
               submenuIsOpen ? "rotate-180" : ""
             }`}
           />
-        )}
-      </Link>
+        </div>
+      ) : (
+        <div onClick={() => setWholeMenuIsOpen(false)}>
+          <Link className="text-xl hover:text-primary" href={href}>
+            {title}
+          </Link>
+        </div>
+      )}
+
       {submenuIsOpen && (
         <div className="pl-8 flex flex-col ">
           {links.map((el) => (
-            <Link
-              key={el.title}
-              className="flex gap-2 items-center hover:text-primary hover:cursor-pointer text-lg"
-              onClick={() => setWholeMenuIsOpen((open) => !open)}
-              href={el.href}
-            >
-              {el.title}
-            </Link>
+            <div key={el.title} onClick={() => setWholeMenuIsOpen(false)}>
+              <Link
+                className="flex gap-2 items-center hover:text-primary hover:cursor-pointer text-lg"
+                onClick={() => setWholeMenuIsOpen(false)}
+                href={el.href}
+              >
+                {el.title}
+              </Link>
+            </div>
           ))}
         </div>
       )}
