@@ -1,5 +1,7 @@
 "use server";
 
+import { revalidateTag } from "next/cache";
+
 export const handleSubmit = async (formData) => {
   const baseURL =
     process.env.NODE_ENV !== "production"
@@ -26,4 +28,8 @@ export const handleSubmit = async (formData) => {
   } catch (error) {
     console.error(error);
   }
+};
+
+export const revalidateEvens = async () => {
+  revalidateTag("events");
 };
