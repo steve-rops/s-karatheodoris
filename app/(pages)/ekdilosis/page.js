@@ -6,6 +6,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { revalidateEvens } from "@/app/actions";
 
+export const dynamic = "force-dynamic";
+
 export default function EkdilosisPage() {
   return (
     <div className="lg:max-w-[65%] lg:mx-auto space-y-10">

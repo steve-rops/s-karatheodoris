@@ -3,9 +3,18 @@ export const getEvents = async () => {
     process.env.NODE_ENV !== "production"
       ? process.env.ENV_BASE_URL
       : process.env.PRODUCTION_BASE_URL;
+  console.log(baseURL);
 
-  const res = await fetch(`${baseURL}/api/events`);
-  const data = await res.json();
+  try {
+    const res = await fetch(`${baseURL}/api/events`, {
+      headers: {
+        Accept: "application/json",
+      },
+    });
+    const data = await res.json();
 
-  return data;
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 };
