@@ -9,7 +9,7 @@ export async function GET() {
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,
       },
       cache: "force-cache",
-      next: { tags: ["events"] },
+      next: { tags: ["events"], revalidate: 60 },
     }
   );
 
