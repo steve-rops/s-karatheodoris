@@ -1,22 +1,11 @@
 export const getEvents = async () => {
-  try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_SUPABASE_URL}/rest/v1/events`,
-      {
-        headers: {
-          apiKey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
-          Authorization: `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,
-        },
-        cache: "force-cache", // Cache the request
-        next: { revalidate: 10 }, // Revalidate every 60 seconds
-      }
-    );
+  const baseURL =
+    process.env.NODE_ENV !== "production"
+      ? process.env.ENV_BASE_URL
+      : process.env.PRODUCTION_BASE_URL;
 
-    if (!response.ok) throw new Error("Failed to fetch events");
+  const res = await fetch(`${baseURL}/api/events`);
+  const data = await res.json();
 
-    return await response.json();
-  } catch (error) {
-    console.error(error);
-    return [];
-  }
+  return data;
 };
