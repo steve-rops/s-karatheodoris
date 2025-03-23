@@ -5,11 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const EkdilosisList = async () => {
-  const data = await getEvents();
+  const { mainEvents, secEvents } = await getEvents();
 
   return (
-    <div className="space-y-4 ">
-      {data.map((ev) => (
+    <div className="space-y-4 lg:grid lg:grid-cols-2 lg:gap-3 ">
+      {mainEvents.map((ev) => (
         <EventItem key={ev.title} event={ev} />
       ))}
     </div>
@@ -31,14 +31,14 @@ const EventItem = ({ event }) => {
 
       <h4 className="text-lg  font-semibold">{event.title}</h4>
 
-      <div>
+      <div className="text-sm">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
         voluptates provident, illo repudiandae ab dolore voluptas? Fuga illum
         natus corporis.
       </div>
 
       <Link href="#">
-        <Button>Μάθε περισσότερα</Button>
+        <Button>Λεπτομέρειες</Button>
       </Link>
     </div>
   );
@@ -47,9 +47,17 @@ const EventItem = ({ event }) => {
 export const EkdilosisListSkeleton = () => {
   const arr = Array.from({ length: 5 }).map((_, i) => i);
   return (
-    <div className="space-y-2">
+    <div className="space-y-4 lg:grid lg:grid-cols-2 lg:gap-3 ">
       {arr.map((el) => (
-        <Skeleton key={el} className="w-full h-8 rounded-md" />
+        <Skeleton
+          key={el}
+          className=" p-3 rounded-md w-[85%] space-y-4 mx-auto"
+        >
+          <Skeleton className="h-32 bg-gray-600" />
+          <Skeleton className="h-6 bg-gray-600" />
+          <Skeleton className="h-6 w-[75%] bg-gray-600" />
+          <Skeleton className="h-6 w-14 bg-gray-600" />
+        </Skeleton>
       ))}
     </div>
   );

@@ -17,5 +17,10 @@ export async function GET() {
 
   if (!res.ok) NextResponse.json({ error: "Failed to fetch", status: 405 });
 
-  return NextResponse.json(data);
+  const mainEvents = data.filter((ev) => ev.category === "main");
+  const secEvents = data.filter((ev) => ev.category === "secondary");
+
+  const refinedData = { mainEvents: [...mainEvents], secEvents: secEvents };
+
+  return NextResponse.json(refinedData);
 }

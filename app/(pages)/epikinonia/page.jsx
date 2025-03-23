@@ -23,8 +23,8 @@ export default function EpikinoniaPage() {
       <div>
         <h1 className="text-2xl text-primary text-center">Επικοινωνία</h1>
         <p className="text-sm text-gray-800 text-balance text-center">
-          Επικοινωνήστε μαζί μας. Πείτε μας προτάσεις, παράπονα και οτιδήποτε
-          μπορούμε να φανούμε χρήσιμοι.
+          Επικοινωνήστε μαζί μας. Πείτε μας προτάσεις, παράπονα ή ό,τι άλλο
+          επιθυμείτε.
         </p>
       </div>
 
@@ -90,11 +90,13 @@ export default function EpikinoniaPage() {
       </div>
 
       {!subStatus && (
-        <div className=" lg:w-96 mx-auto flex justify-center flex-col ">
-          <h3 className="text-primary text-lg">Στείλε μας ένα μήνυμα</h3>
+        <div className=" lg:max-w-96 mx-auto flex justify-center flex-col  ">
+          <h3 className="text-primary text-lg text-center">
+            Φόρμα Επικοινωνίας
+          </h3>
           <form
             onSubmit={onSubmit}
-            className="max-w-lg  border-[0.5px] border-primary/50 rounded-md p-3  shadow-lg space-y-4"
+            className="md:w-lg w-full mx-auto  border-[0.5px] border-primary/50 rounded-md p-3  shadow-lg space-y-4"
           >
             <div className="flex flex-col">
               <label htmlFor="name" className="text-gray-700 font-medium">
