@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, MapPin } from "lucide-react";
+import Link from "next/link";
 
 export default function EkdiloseisHomePage() {
   return (
@@ -12,10 +13,10 @@ export default function EkdiloseisHomePage() {
         Μάθετε ό,τι χρειάζεστε για τις Εκδηλώσεις του χωριού και του Συλλόγου
         μας.
       </p>
-      <div className="flex justify-center ">
+      <Link href="/ekdilosis" className="flex justify-center ">
         <Button className="hover:cursor-pointer">Όλες οι Εκδηλώσεις</Button>
-      </div>
-
+      </Link>
+      {/* 
       <div className="lg:w-[50%] mx-auto border border-primary/30 bg-background rounded-lg p-4 border-l-4 border-l-green-400 space-y-3 ">
         <Badge className="bg-green-500 text-white">Προγραμματισμένο</Badge>
         <h4 className="text-[18px] font-semibold">
@@ -54,10 +55,12 @@ export default function EkdiloseisHomePage() {
           </p>
         </div>
 
-        <Button className="border border-primary" variant="outline">
-          Λεπτομέριες
-        </Button>
-      </div>
+        <Link href="/ekdilosis">
+          <Button className="border border-primary" variant="outline">
+            Λεπτομέρειες
+          </Button>
+        </Link>
+      </div> */}
     </div>
   );
 }
