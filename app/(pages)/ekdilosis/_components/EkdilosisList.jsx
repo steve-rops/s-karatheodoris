@@ -9,7 +9,7 @@ import { useState } from "react";
 
 export const EkdilosisList = () => {
   const { data, isLoading } = useGetEvents();
-  const [events, setEvents] = useState("all");
+  const [events, setEvents] = useState("main");
 
   if (isLoading) return <EkdilosisListSkeleton />;
 
@@ -80,8 +80,8 @@ const EventItem = ({ event }) => {
         natus corporis.
       </div>
 
-      <Link href="#">
-        <Button>Λεπτομέρειες</Button>
+      <Link href={`/ekdilosis/${event.slug}`}>
+        <Button className="hover:cursor-pointer">Λεπτομέρειες</Button>
       </Link>
     </div>
   );
