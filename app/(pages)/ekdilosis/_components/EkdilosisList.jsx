@@ -1,17 +1,61 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { getEvents } from "@/supabase";
+import { useGetEvents } from "@/hooks/useGetEvents";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
-export const EkdilosisList = async () => {
-  const { mainEvents, secEvents } = await getEvents();
+export const EkdilosisList = () => {
+  const { data, isLoading } = useGetEvents();
+  const [events, setEvents] = useState("all");
+
+  if (isLoading) return <EkdilosisListSkeleton />;
+
+  let dataToShow = [];
+  if (events === "main") dataToShow = data.mainEvents;
+  if (events === "sec") dataToShow = data.secEvents;
+  if (events === "all") dataToShow = [...data.mainEvents, ...data.secEvents];
 
   return (
-    <div className="space-y-4 lg:grid lg:grid-cols-2 lg:gap-3 ">
-      {mainEvents.map((ev) => (
-        <EventItem key={ev.title} event={ev} />
-      ))}
+    <div className="space-y-4">
+      <div
+        onClick={(e) => setEvents(e.target.value)}
+        className="flex mx-auto items-center justify-center lg:justify-self-start gap-3 px-7  w-fit "
+      >
+        <button
+          value="main"
+          className={`hover:cursor-pointer ${
+            events === "main" && "border-b-2 border-b-primary"
+          }`}
+        >
+          Κύριες
+        </button>
+        <button
+          value="sec"
+          className={`hover:cursor-pointer ${
+            events === "sec" && "border-b-2 border-b-primary"
+          }`}
+        >
+          Συγκυριακές
+        </button>
+        <button
+          value="all"
+          className={`hover:cursor-pointer ${
+            events === "all" && "border-b-2 border-b-primary"
+          }`}
+        >
+          Όλες
+        </button>
+      </div>
+      <hr />
+
+      <div className="space-y-4 lg:grid lg:grid-cols-2 lg:gap-3 ">
+        {dataToShow.map((ev) => (
+          <EventItem key={ev.title} event={ev} />
+        ))}
+      </div>
     </div>
   );
 };
@@ -22,9 +66,8 @@ const EventItem = ({ event }) => {
       <div className="relative w-full h-32">
         <Image
           src="/plateia.jpg"
-          objectFit="cover"
           fill
-          className="rounded-t-lg"
+          className="rounded-t-lg object-cover"
           alt="event image"
         />
       </div>

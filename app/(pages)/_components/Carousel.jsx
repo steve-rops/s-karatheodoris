@@ -55,11 +55,10 @@ export default function CarouselHomePage({ opts }) {
           <CarouselItem key={image}>
             <div className="relative mx-auto h-[200px] lg:h-[400px]">
               <Image
-                className="rounded-[5px]"
+                className="rounded-[5px] object-cover"
                 priority
                 src={image}
                 fill
-                style={{ objectFit: "cover" }}
                 alt={`Carousel image`}
               />
             </div>

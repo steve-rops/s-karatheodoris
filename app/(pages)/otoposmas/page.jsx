@@ -17,8 +17,7 @@ export default function OtoposmasPage() {
           priority
           src="/o-topos-mas/otoposmas-1.png"
           fill
-          objectFit="cover"
-          className="absolute"
+          className="absolute object-cover"
           alt="o-silogos-image"
         />
       </div>
@@ -48,8 +47,7 @@ export default function OtoposmasPage() {
           priority
           src="/o-topos-mas/otoposmas-2.webp"
           fill
-          objectFit="cover"
-          className="absolute"
+          className="absolute object-cover"
           alt="o-silogos-image"
         />
       </div>
