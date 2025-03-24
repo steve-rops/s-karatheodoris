@@ -13,8 +13,7 @@ export default function MouseioKaratheodori() {
             priority
             src="/mouseio.jpg"
             fill
-            objectFit="cover"
-            className="absolute"
+            className="absolute object-cover"
             alt="o-silogos-image"
           />
         </div>

@@ -90,13 +90,13 @@ export default function EpikinoniaPage() {
       </div>
 
       {!subStatus && (
-        <div className=" lg:max-w-96 mx-auto flex justify-center flex-col  ">
+        <div className=" mx-auto flex justify-center items-center flex-col  ">
           <h3 className="text-primary text-lg text-center">
             Φόρμα Επικοινωνίας
           </h3>
           <form
             onSubmit={onSubmit}
-            className="md:w-lg w-full mx-auto  border-[0.5px] border-primary/50 rounded-md p-3  shadow-lg space-y-4"
+            className="md:w-lg w-full border-[0.5px] border-primary/50 rounded-md p-3  shadow-lg space-y-4"
           >
             <div className="flex flex-col">
               <label htmlFor="name" className="text-gray-700 font-medium">

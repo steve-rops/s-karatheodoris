@@ -5,6 +5,9 @@ import Header from "./_components/Header";
 import { usePathname } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 export default function Layout({ children }) {
   const pathname = usePathname();
@@ -22,8 +25,9 @@ export default function Layout({ children }) {
             </Button>
           </Link>
         )}
-
-        {children}
+        <QueryClientProvider client={queryClient}>
+          {children}
+        </QueryClientProvider>
       </div>
       <Footer />
     </div>

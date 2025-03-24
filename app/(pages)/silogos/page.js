@@ -29,8 +29,7 @@ export default function SilogosPage() {
               priority
               src="/o-silogos/osilogos-1.png"
               fill
-              objectFit="cover"
-              className="absolute"
+              className="absolute object-cover"
               alt="karatheodoris sculpture"
             />
           </div>
@@ -135,8 +134,7 @@ export default function SilogosPage() {
             <Image
               src="/o-silogos/osilogos-2.jpg"
               fill
-              objectFit="cover"
-              className="absolute"
+              className="absolute object-cover"
               alt="o-silogos-image"
             />
           </div>
