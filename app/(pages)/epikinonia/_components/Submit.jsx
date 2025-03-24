@@ -1,11 +1,9 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { useGetEvents } from "@/hooks/useGetEvents";
 import { useFormStatus } from "react-dom";
 
 export default function Submit() {
-  useGetEvents();
   const { pending } = useFormStatus();
   return (
     <Button
