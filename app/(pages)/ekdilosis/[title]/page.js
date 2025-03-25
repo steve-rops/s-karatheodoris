@@ -10,7 +10,6 @@ export default async function SingleEkdilosiPage({ params }) {
     (ev) => ev.slug === slug
   );
 
-  console.log(slug);
   return (
     <Suspense fallback={<div className="loader"></div>}>
       <h1 className="text-2xl text-primary text-center">{event.title}</h1>
