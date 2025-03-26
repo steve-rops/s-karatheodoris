@@ -1,7 +1,9 @@
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Calendar, Clock, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Prosexws, { ProsexwsSkeleton } from "./Prosexws";
+import { Suspense } from "react";
 
 export default function EkdiloseisHomePage() {
   return (
@@ -16,6 +18,11 @@ export default function EkdiloseisHomePage() {
       <Link href="/ekdilosis" className="flex justify-center ">
         <Button className="hover:cursor-pointer">Όλες οι Εκδηλώσεις</Button>
       </Link>
+
+      <Suspense fallback={<ProsexwsSkeleton />}>
+        <Prosexws />
+      </Suspense>
+
       {/* 
       <div className="lg:w-[50%] mx-auto border border-primary/30 bg-background rounded-lg p-4 border-l-4 border-l-green-400 space-y-3 ">
         <Badge className="bg-green-500 text-white">Προγραμματισμένο</Badge>
