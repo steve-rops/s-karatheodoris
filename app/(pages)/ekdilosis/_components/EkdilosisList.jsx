@@ -21,7 +21,7 @@ export const EkdilosisList = () => {
   let chosenData = [];
 
   if (isLoading) return <EkdilosisListSkeleton />;
-  const dataCombined = [...data.mainEvents, ...data.secEvents];
+
   if (events === "main") chosenData = data.mainEvents;
   if (events === "sec") chosenData = data.secEvents;
 
@@ -91,7 +91,7 @@ const EventItem = ({ event, isProsexws }) => {
           </Badge>
         )}
         <Image
-          src="/plateia.jpg"
+          src={event.images.baner || "/plateia.jpg"}
           fill
           className="rounded-t-lg object-cover"
           alt="event image"

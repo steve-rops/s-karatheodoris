@@ -1,8 +1,4 @@
-import { Suspense } from "react";
-import {
-  EkdilosisList,
-  EkdilosisListSkeleton,
-} from "./_components/EkdilosisList";
+import { EkdilosisList } from "./_components/EkdilosisList";
 
 export const dynamic = "force-dynamic";
 

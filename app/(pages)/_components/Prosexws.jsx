@@ -5,8 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useGetEvents } from "@/hooks/useGetEvents";
 import { getEvents } from "@/supabase";
-import { differenceInDays, isFuture } from "date-fns";
+import { differenceInDays, format, isFuture } from "date-fns";
 import { Calendar, Clock, MapPin } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Prosexws() {
@@ -40,9 +41,19 @@ export default function Prosexws() {
           className="min-w-[85%] mx-auto border border-primary/30 bg-background rounded-lg p-2 border-l-4 border-l-green-400 space-y-3 snap-start"
         >
           {ev.status === "ok" && (
-            <Badge className="bg-green-500 text-white text-xs">
-              Προγραμματισμένο
-            </Badge>
+            <div className="relative w-full h-32">
+              {ev.status === "ok" && (
+                <Badge className="text-white absolute z-50 left-2 top-0  bg-green-500">
+                  Προγραμματισμένο
+                </Badge>
+              )}
+              <Image
+                src="/plateia.jpg"
+                fill
+                className="rounded-t-lg object-cover"
+                alt="event image"
+              />
+            </div>
           )}
           <h4 className="text-[16px] font-semibold">{ev.title}</h4>
 
@@ -60,7 +71,9 @@ export default function Prosexws() {
             <div className="flex items-center gap-2">
               <div className="flex items-center gap-2">
                 <Calendar />
-                <span className="text-xs">{ev.startDate}</span>
+                <span className="text-xs">
+                  {format(ev.startDate, "dd/MM/yyyy")}
+                </span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock />
