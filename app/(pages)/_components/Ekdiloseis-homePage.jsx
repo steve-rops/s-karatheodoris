@@ -19,9 +19,7 @@ export default function EkdiloseisHomePage() {
         <Button className="hover:cursor-pointer">Όλες οι Εκδηλώσεις</Button>
       </Link>
 
-      <Suspense fallback={<ProsexwsSkeleton />}>
-        <Prosexws />
-      </Suspense>
+      <Prosexws />
 
       {/* 
       <div className="lg:w-[50%] mx-auto border border-primary/30 bg-background rounded-lg p-4 border-l-4 border-l-green-400 space-y-3 ">
