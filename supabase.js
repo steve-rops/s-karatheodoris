@@ -9,6 +9,7 @@ export const getEvents = async () => {
       headers: {
         Accept: "application/json",
       },
+      cache: "no-store",
     });
     const data = await res.json();
 
