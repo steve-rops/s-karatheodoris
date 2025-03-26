@@ -1,13 +1,20 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
+import { useGetEvents } from "@/hooks/useGetEvents";
 import { getEvents } from "@/supabase";
 import { differenceInDays, isFuture } from "date-fns";
 import { Calendar, Clock, MapPin } from "lucide-react";
 import Link from "next/link";
 
-export default async function Prosexws() {
-  const { mainEvents, secEvents } = await getEvents();
+export default function Prosexws() {
+  const { data, isLoading } = useGetEvents();
+
+  if (isLoading) return <ProsexwsSkeleton />;
+
+  const { mainEvents, secEvents } = data;
 
   const prosexws = [
     ...mainEvents.filter(
