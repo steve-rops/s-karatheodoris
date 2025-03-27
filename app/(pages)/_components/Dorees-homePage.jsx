@@ -9,7 +9,7 @@ export default function DoreesHomePage() {
       </h2>
       <p className="text-center text-gray-700">
         Η βοήθεια σου, είναι πολύτιμη και απαραίτητη για να διατηρηθεί η
-        πολιτιστική μας κληρονομιά. Αν θέλεις στήριξέ μας.
+        πολιτιστική μας κληρονομιά. Στήριξέ μας αν επιθυμείς.
       </p>
       <Link className="flex justify-center" href="">
         <Button size="lg" className="text-white">

@@ -79,14 +79,6 @@ export default function Footer() {
                   Εκδηλώσεις
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/epikinonia"
-                  className="text-muted hover:text-white"
-                >
-                  Επικοινωνία
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -128,26 +120,6 @@ export default function Footer() {
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
               © {new Date().getFullYear()} s-karatheodoris. All rights reserved.
             </p>
-            {/* <div className="flex space-x-6">
-              <Link
-                href="/privacy"
-                className="text-gray-400 hover:text-white text-sm"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/terms"
-                className="text-gray-400 hover:text-white text-sm"
-              >
-                Terms of Service
-              </Link>
-              <Link
-                href="/cookies"
-                className="text-gray-400 hover:text-white text-sm"
-              >
-                Cookie Policy
-              </Link>
-            </div> */}
           </div>
         </div>
       </div>
