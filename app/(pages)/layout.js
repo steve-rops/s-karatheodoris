@@ -16,7 +16,7 @@ export default function Layout({ children }) {
     <div>
       <Header />
 
-      <div className="p-4 ">
+      <div className="p-4 mb-12 ">
         {pathname !== "/" && (
           <Link className="" href="/">
             <Button size="sm" className="mb-8" variant="outline">
