@@ -100,11 +100,9 @@ const EventItem = ({ event, isProsexws }) => {
 
       <h4 className="text-lg  font-semibold">{event.title}</h4>
 
-      <div className="text-sm">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-        voluptates provident, illo repudiandae ab dolore voluptas? Fuga illum
-        natus corporis.
-      </div>
+      {event.shortDescription && (
+        <div className="text-sm">{event.shortDescription}</div>
+      )}
 
       <Link href={`/ekdilosis/${event.slug}`}>
         <Button className="hover:cursor-pointer">Λεπτομέρειες</Button>
