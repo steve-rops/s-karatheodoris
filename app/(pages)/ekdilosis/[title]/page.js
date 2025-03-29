@@ -15,11 +15,11 @@ export default async function SingleEkdilosiPage({ params }) {
 
   return (
     <Suspense fallback={<div className="loader"></div>}>
-      <div className="space-y-10">
-        <div className="relative w-full h-54 lg:w-[500px] lg:mx-auto">
+      <div className="space-y-10 lg:max-w-[65%] mx-auto">
+        <div className="relative w-full h-54 lg:w-[500px] lg:mx-auto rounded-md">
           <Image
             priority
-            src={event.images.baner}
+            src={event.images?.baner || "/plateia.jpg"}
             fill
             className="absolute object-contain rounded-md"
             alt="event-image"
@@ -56,8 +56,8 @@ export default async function SingleEkdilosiPage({ params }) {
           <div className="text-primary text-lg text-center">
             Δείτε περισσότερα για την εκδήλωση
           </div>
-          <div className="flex gap-2 justify-center items-center">
-            {event.links.length > 0 &&
+          <div className="flex gap-4 justify-center items-center">
+            {event.links?.length > 0 &&
               event.links.map((link) => (
                 <Link target="_blank" key={link.name} href={link.href}>
                   {link.name.includes("evros") ? (
@@ -68,7 +68,7 @@ export default async function SingleEkdilosiPage({ params }) {
                       src="/e-evros.png"
                     />
                   ) : (
-                    <FacebookIcon size={32} />
+                    <FacebookIcon size={36} color="var(--color-blue-600)" />
                   )}
                 </Link>
               ))}

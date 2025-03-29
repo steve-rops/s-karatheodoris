@@ -44,7 +44,7 @@ export default function Header() {
           </Link>
         </div>
 
-        <Link href="#">
+        {/* <Link href="#">
           <Button
             size="sm"
             className="p-1 bg-accent font-semibold"
@@ -52,7 +52,7 @@ export default function Header() {
           >
             Υποστήριξέ μας!
           </Button>
-        </Link>
+        </Link> */}
       </div>
 
       <nav className="p-2 relative flex items-center justify-between ">

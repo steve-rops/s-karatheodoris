@@ -32,7 +32,7 @@ export default function Prosexws() {
 
   return (
     <div
-      className={`flex w-full gap-2 overflow-x-auto mx-auto lg:w-[50%] lg:shadow-md p-2 
+      className={`flex w-full gap-2 overflow-x-auto mx-auto lg:w-[50%]
       ${prosexws.length > 1 ? "scroll-smooth snap-x snap-mandatory" : ""}`}
     >
       {prosexws.map((ev, index) => (
