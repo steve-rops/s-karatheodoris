@@ -1,6 +1,9 @@
 "use server";
 
-import { revalidateTag } from "next/cache";
+import { createClient } from "@/lib/supabase/server";
+import { revalidatePath, revalidateTag } from "next/cache";
+import { redirect } from "next/navigation";
+import { cookies } from "next/headers";
 
 export const handleSubmit = async (formData) => {
   const baseURL =
@@ -33,3 +36,27 @@ export const handleSubmit = async (formData) => {
 export const revalidateEvens = async () => {
   revalidateTag("events");
 };
+
+export async function login(formData) {
+  const supabase = await createClient(cookies());
+  // type-casting here for convenience
+  // in practice, you should validate your inputs
+  const data = {
+    email: formData.get("email"),
+    password: formData.get("password"),
+  };
+  const { error } = await supabase.auth.signInWithPassword(data);
+  if (error) {
+    redirect("/");
+  }
+  revalidatePath("/", "layout");
+  redirect("/admin");
+}
+
+export async function signOut() {
+  const supabase = await createClient(cookies());
+  const { error } = await supabase.auth.signOut();
+  if (error) console.error(error);
+
+  redirect("/");
+}
