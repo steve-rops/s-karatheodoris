@@ -11,9 +11,7 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const images = ["/mouseio.jpg", "/parathrhthrio.jpg", "/plateia.jpg"];
-
-export default function CarouselHomePage({ opts }) {
+export default function CarouselHomePage({ opts, images }) {
   const [dotIndex, setDotIndex] = useState(0);
   const [api, setApi] = useState(null);
 
@@ -55,7 +53,7 @@ export default function CarouselHomePage({ opts }) {
           <CarouselItem key={image}>
             <div className="relative mx-auto h-[200px] lg:h-[400px]">
               <Image
-                className="rounded-[5px] object-cover"
+                className="rounded-[5px] object-contain"
                 priority
                 src={image}
                 fill
