@@ -6,7 +6,7 @@ const nextConfig = {
         protocol: "https",
         hostname: "mnwdwdgfeudabklsaguz.supabase.co",
         port: "",
-        pathname: "/storage/v1/object/sign/events/**",
+        pathname: "/storage/v1/object/**",
       },
     ],
   },

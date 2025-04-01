@@ -3,6 +3,7 @@ import { getEvents } from "@/supabase";
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
+import CarouselHomePage from "../../_components/Carousel";
 
 export default async function SingleEkdilosiPage({ params }) {
   const para = await params;
@@ -12,6 +13,8 @@ export default async function SingleEkdilosiPage({ params }) {
   const event = [...data.mainEvents, ...data.secEvents].find(
     (ev) => ev.slug === slug
   );
+
+  console.log(event.images.other.length);
 
   return (
     <Suspense fallback={<div className="loader"></div>}>
@@ -34,10 +37,20 @@ export default async function SingleEkdilosiPage({ params }) {
               .map((el) => <p key={el.slice(0, 10)}>{el}</p>)}
         </div>
 
-        {event.images.other.length > 0 && (
-          <div
-            className={`w-full lg:grid lg:grid-cols-${event.images.other.length} space-y-4 gap-4`}
-          >
+        {event.images.other.length === 1 && (
+          <div className="relative w-full h-56 lg:w-48">
+            <Image
+              priority
+              src={event.images.other[0]}
+              fill
+              className="absolute object-cover"
+              alt="event image"
+            />
+          </div>
+        )}
+
+        {event.images.other.length === 2 && (
+          <div className={`w-full lg:grid lg:grid-cols-2 space-y-4 gap-4`}>
             {event.images.other.map((img, index) => (
               <div key={index} className="relative w-full h-56 ">
                 <Image
@@ -50,6 +63,10 @@ export default async function SingleEkdilosiPage({ params }) {
               </div>
             ))}
           </div>
+        )}
+
+        {event.images.other.length > 2 && (
+          <CarouselHomePage opts={{ loop: true }} images={event.images.other} />
         )}
 
         <div className="space-y-4">
