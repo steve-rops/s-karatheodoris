@@ -64,7 +64,7 @@ export const EkdilosisList = () => {
       </div>
       <hr />
 
-      <div className="space-y-4 lg:grid lg:grid-cols-2 lg:gap-3 ">
+      <div className="space-y-4 min-h-fit lg:grid lg:grid-cols-2 lg:gap-3 ">
         {dataToShow.map((ev) => (
           <EventItem
             isProsexws={prosexwsFlag(ev.startDate)}
@@ -80,33 +80,43 @@ export const EkdilosisList = () => {
 const EventItem = ({ event, isProsexws }) => {
   return (
     <div
-      className={`bg-accent/30 p-3 rounded-lg shadow-md w-[85%] space-y-4 mx-auto ${
-        isProsexws && "border-l-4 border-l-green-500"
+      className={`w-full relative bg-white rounded-2xl shadow-lg h-full  border border-gray-200 space-y-4 mx-auto ${
+        isProsexws ? "border-l-4 border-l-green-500" : ""
       }`}
     >
-      <div className="relative w-full h-32">
+      <div className="relative w-full h-40">
         {isProsexws && (
-          <Badge className="text-white absolute z-50 left-2 top-0  bg-green-500">
+          <Badge className="text-white absolute z-50 left-2 top-2 bg-green-500 px-2 py-1 rounded-md text-xs">
             Προγραμματισμένο
           </Badge>
         )}
         <Image
-          src={event.images.baner || "/plateia.jpg"}
+          src={event.images?.baner || "/plateia.jpg"}
+          alt="Event Banner"
           fill
           className="rounded-t-lg object-cover"
-          alt="event image"
         />
       </div>
 
-      <h4 className="text-lg  font-semibold">{event.title}</h4>
+      <div className={`flex flex-col  gap-2 p-3 `}>
+        <p className="text-sm text-gray-500 font-medium">
+          {event.category === "secondary" && (
+            <span>{format(event.startDate, "dd/MM/yyyy")}</span>
+          )}
+        </p>
 
-      {event.shortDescription && (
-        <div className="text-sm">{event.shortDescription}</div>
-      )}
+        <h3 className="  font-semibold text-gray-900">{event.title}</h3>
 
-      <Link href={`/ekdilosis/${event.slug}`}>
-        <Button className="hover:cursor-pointer">Λεπτομέρειες</Button>
-      </Link>
+        <p className="text-[12px]  overflow-hidden text-gray-600">
+          {event.shortDescription}
+        </p>
+
+        <Link className="" href={`/ekdilosis/${event.slug}`}>
+          <Button className="mt-4 w-full  text-white py-2 rounded-lg text-sm font-medium hover:bg-primary/60 transition hover:cursor-pointer">
+            Λεπτομέρειες
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 };

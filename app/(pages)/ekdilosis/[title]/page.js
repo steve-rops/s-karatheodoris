@@ -14,8 +14,6 @@ export default async function SingleEkdilosiPage({ params }) {
     (ev) => ev.slug === slug
   );
 
-  console.log(event.images.other.length);
-
   return (
     <Suspense fallback={<div className="loader"></div>}>
       <div className="space-y-10 lg:max-w-[65%] mx-auto">
