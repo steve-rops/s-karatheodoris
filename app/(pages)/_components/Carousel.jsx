@@ -9,9 +9,12 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function CarouselHomePage({ opts, images }) {
+  const pathname = usePathname();
+  const lgWidth = pathname.includes("ekdilosi") ? "lg:w-[75%]" : "lg:w-[50%]";
   const [dotIndex, setDotIndex] = useState(0);
   const [api, setApi] = useState(null);
 
@@ -39,7 +42,7 @@ export default function CarouselHomePage({ opts, images }) {
     <Carousel
       setApi={setApi}
       opts={opts}
-      className="w-[80%] lg:w-[50%] mx-auto"
+      className={`w-[80%] ${lgWidth} mx-auto`}
       plugins={[
         Autoplay({
           delay: 4500,
