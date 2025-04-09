@@ -78,13 +78,16 @@ export const EkdilosisList = () => {
 };
 
 const EventItem = ({ event, isProsexws }) => {
+  const cat = event.category;
   return (
     <div
-      className={`w-full relative bg-white rounded-2xl shadow-lg h-full  border border-gray-200 space-y-4 mx-auto ${
+      className={`w-full relative ${
+        cat === "main" ? "h-72" : "h-96"
+      } bg-white rounded-2xl shadow-lg  border border-gray-200  mx-auto ${
         isProsexws ? "border-l-4 border-l-green-500" : ""
       }`}
     >
-      <div className="relative w-full h-40">
+      <div className="relative w-full h-[45%]">
         {isProsexws && (
           <Badge className="text-white absolute z-50 left-2 top-2 bg-green-500 px-2 py-1 rounded-md text-xs">
             Προγραμματισμένο
@@ -98,21 +101,23 @@ const EventItem = ({ event, isProsexws }) => {
         />
       </div>
 
-      <div className={`flex flex-col  gap-2 p-3 `}>
-        <p className="text-sm text-gray-500 font-medium">
-          {event.category === "secondary" && (
-            <span>{format(event.startDate, "dd/MM/yyyy")}</span>
-          )}
-        </p>
+      <div className="flex flex-col justify-between h-[55%] gap p-2">
+        <div className="h-full space-y-1">
+          <p className="text-sm text-gray-500 font-medium">
+            {event.category === "secondary" && (
+              <span>{format(event.startDate, "dd/MM/yyyy")}</span>
+            )}
+          </p>
 
-        <h3 className="  font-semibold text-gray-900">{event.title}</h3>
+          <h3 className="  font-semibold text-gray-900">{event.title}</h3>
 
-        <p className="text-[12px]  overflow-hidden text-gray-600">
-          {event.shortDescription}
-        </p>
+          <p className="text-[12px]  overflow-hidden text-gray-600">
+            {event.shortDescription}
+          </p>
+        </div>
 
         <Link className="" href={`/ekdilosis/${event.slug}`}>
-          <Button className="mt-4 w-full  text-white py-2 rounded-lg text-sm font-medium hover:bg-primary/60 transition hover:cursor-pointer">
+          <Button className="mt-4 w-full text-white py-2 rounded-lg text-sm font-medium hover:bg-primary/60 transition hover:cursor-pointer">
             Λεπτομέρειες
           </Button>
         </Link>
