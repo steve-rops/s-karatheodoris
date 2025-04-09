@@ -1,9 +1,6 @@
-import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Prosexws, { ProsexwsSkeleton } from "./Prosexws";
-import { Suspense } from "react";
+import Prosexws from "./Prosexws";
 
 export default function EkdiloseisHomePage() {
   return (

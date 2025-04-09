@@ -2,9 +2,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
 import { useGetEvents } from "@/hooks/useGetEvents";
-import { getEvents } from "@/supabase";
 import { differenceInDays, format, isFuture } from "date-fns";
 import { Calendar, Clock, MapPin } from "lucide-react";
 import Image from "next/image";
@@ -106,19 +104,8 @@ export default function Prosexws() {
 
 export const ProsexwsSkeleton = () => {
   return (
-    <div className="lg:w-[50%] mx-auto border border-primary/30 bg-background rounded-lg p-4  space-y-3 ">
-      <Skeleton className="w-24 h-6" />
-      <Skeleton className="w-full h-10" />
-
-      <Skeleton className="w-[75%] h-6" />
-      <div className="flex gap-2">
-        <Skeleton className="w-[45%]" />
-        <Skeleton className="w-[45%]" />
-      </div>
-
-      <Skeleton className="w-full h-30" />
-
-      <Skeleton className="w-[35%] h-6" />
+    <div className="flex justify-center">
+      <div className="loader"></div>
     </div>
   );
 };
