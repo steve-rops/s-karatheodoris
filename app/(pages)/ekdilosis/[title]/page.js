@@ -17,15 +17,6 @@ export default async function SingleEkdilosiPage({ params }) {
   return (
     <Suspense fallback={<div className="loader"></div>}>
       <div className="space-y-10 lg:max-w-[65%] mx-auto">
-        <div className="relative w-full h-54 lg:w-[500px] lg:mx-auto rounded-md">
-          <Image
-            priority
-            src={event.images?.baner || "/plateia.jpg"}
-            fill
-            className="absolute object-contain rounded-md"
-            alt="event-image"
-          />
-        </div>
         <h1 className="text-2xl text-primary text-center">{event.title}</h1>
 
         <div className="text-justify space-y-4 text-sm ">
