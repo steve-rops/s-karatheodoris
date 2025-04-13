@@ -5,7 +5,7 @@ export default function LoginPage() {
   return (
     <form
       action={login}
-      className="lg:w-96 w-full mx-auto border-2 border-primary rounded-lg p-4 grid grid-cols-[25%,1fr] gap-2 items-center "
+      className="md:w-96 w-full mx-auto border-2 border-primary rounded-lg p-4 grid grid-cols-[25%,1fr] gap-2 items-center "
     >
       <label htmlFor="email">Email:</label>
       <input

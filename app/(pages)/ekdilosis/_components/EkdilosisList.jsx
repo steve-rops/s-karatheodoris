@@ -83,12 +83,12 @@ const EventItem = ({ event, isProsexws }) => {
   return (
     <div
       className={`w-full relative ${
-        cat === "main" ? "h-[380px]" : "h-[450px]"
+        cat === "main" ? "h-[480px]" : "h-[550px]"
       } bg-white rounded-2xl shadow-lg  border border-gray-200  mx-auto ${
         isProsexws ? "border-l-4 border-l-green-500" : ""
       }`}
     >
-      <div className={`relative w-full h-[55%]`}>
+      <div className={`relative w-full h-[65%]`}>
         {isProsexws && (
           <Badge className="text-white absolute z-50 left-2 top-2 bg-green-500 px-2 py-1 rounded-md text-xs">
             Προγραμματισμένο
@@ -102,7 +102,7 @@ const EventItem = ({ event, isProsexws }) => {
         />
       </div>
 
-      <div className={`flex flex-col justify-between  h-[45%] gap p-2`}>
+      <div className={`flex flex-col justify-between  h-[35%] gap p-2`}>
         <div className="h-full space-y-1">
           <p className="text-sm text-gray-500 font-medium">
             {event.category === "secondary" && (

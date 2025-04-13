@@ -20,7 +20,7 @@ export default function EpikinoniaPage() {
 
   return (
     <div className="space-y-10 w-full">
-      <div>
+      <div className="space-y-1">
         <h1 className="text-2xl text-primary text-center">Επικοινωνία</h1>
         <p className="text-sm text-gray-800 text-balance text-center">
           Επικοινωνήστε μαζί μας. Πείτε μας προτάσεις, παράπονα ή ό,τι άλλο
