@@ -1,6 +1,6 @@
 import FacebookIcon from "@/public/facebook";
 import InstaIcon from "@/public/insta";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, Smartphone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -101,6 +101,13 @@ export default function Footer() {
               >
                 <Phone />
                 <span className="hidden lg:block">+302552071515</span>
+              </Link>
+              <Link
+                className="text-[var(--muted)] hover:text-white flex gap-1 items-center"
+                href="tel:+306980153524"
+              >
+                <Smartphone />
+                <span className="hidden lg:block">+306980153524 (Βάσια)</span>
               </Link>
               <Link
                 className="text-[var(--muted)] hover:text-white flex gap-1 items-center"
