@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function MouseioLaografiko() {
   return (
-    <div className="">
+    <div className="lg:max-w-[65%] lg:mx-auto space-y-10">
       <div className="space-y-4">
         <h1 className="text-2xl text-primary text-center">
           Νέο Λαογραφικό Μουσείο
@@ -23,7 +23,7 @@ export default function MouseioLaografiko() {
           ενδυμασιών θα γίνεται τόσο με φυσικά εκθέματα όσο και με ψηφιακά μέσα.
         </div>
 
-        <div className="relative w-full h-80 lg:w-[500px] lg:mx-auto">
+        <div className="relative w-full h-[500px] lg:w-[800px] lg:mx-auto">
           <Image
             priority
             src="/laografiko-mouseio/laografiko-mouseio-1.jpg"

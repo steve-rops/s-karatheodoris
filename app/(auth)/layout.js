@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Footer from "../(pages)/_components/Footer";
 import Header from "./_components/Header";
 
@@ -6,7 +7,9 @@ export default function layout({ children }) {
     <div className="">
       <Header />
 
-      <div className="p-4 h-10">{children}</div>
+      <Suspense fallback={<div className="loader" />}>
+        <div className="p-4 ">{children}</div>
+      </Suspense>
 
       <Footer />
     </div>
