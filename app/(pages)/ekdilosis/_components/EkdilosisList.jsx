@@ -82,7 +82,7 @@ const EventItem = ({ event, isProsexws }) => {
   return (
     <div
       className={`w-full relative ${
-        cat === "main" ? "h-[350px]" : "h-[450px]"
+        cat === "main" ? "h-[380px]" : "h-[450px]"
       } bg-white rounded-2xl shadow-lg  border border-gray-200  mx-auto ${
         isProsexws ? "border-l-4 border-l-green-500" : ""
       }`}
