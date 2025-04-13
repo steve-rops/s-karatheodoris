@@ -13,7 +13,6 @@ import Link from "next/link";
 import Hamburger from "./Hamburger";
 import FacebookIcon from "@/public/facebook";
 import { menuLinks } from "@/data";
-import { Button } from "@/components/ui/button";
 
 export default function Header() {
   return (

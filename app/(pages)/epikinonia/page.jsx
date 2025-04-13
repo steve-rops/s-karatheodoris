@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckCircle, Mail, MapPin, Phone } from "lucide-react";
+import { CheckCircle, Mail, MapPin, Phone, Smartphone } from "lucide-react";
 import Link from "next/link";
 import Submit from "./_components/Submit";
 import { handleSubmit } from "@/app/actions";
@@ -29,13 +29,20 @@ export default function EpikinoniaPage() {
       </div>
 
       <div className="text-gray-600 space-y-2 grid place-items-center">
-        <div className="flex gap-2 ">
+        <div className="flex flex-col gap-2 items-center ">
           <Link
             href="tel:+302552071515"
             className=" flex items-center text-sm  gap-1 hover:text-black"
           >
             <Phone size={16} />
             <span>2552071515</span>
+          </Link>
+          <Link
+            className="flex items-center text-sm  gap-1 hover:text-black"
+            href="tel:+306980153524"
+          >
+            <Smartphone size={16} />
+            <span className="lg:block">+306980153524 (Βάσια)</span>
           </Link>
           <div className=" flex items-center  text-sm  gap-1 hover:text-black">
             <Mail size={16} />

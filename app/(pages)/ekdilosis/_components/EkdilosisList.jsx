@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useGetEvents } from "@/hooks/useGetEvents";
+import { useStore } from "@/store/store";
 import {
   compareAsc,
   differenceInDays,
@@ -13,11 +14,11 @@ import {
 } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 export const EkdilosisList = () => {
   const { data, isLoading } = useGetEvents();
-  const [events, setEvents] = useState("main");
+  const events = useStore((state) => state.eventType);
+  const setEvents = useStore((state) => state.setEventType);
   let chosenData = [];
 
   if (isLoading) return <EkdilosisListSkeleton />;
