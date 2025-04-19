@@ -4,6 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
 import CarouselHomePage from "../../_components/Carousel";
+import { cn, prosexwsFlag } from "@/lib/utils";
+import { Calendar, Clock, Map } from "lucide-react";
+import { format } from "date-fns";
+import { Badge } from "@/components/ui/badge";
 
 export default async function SingleEkdilosiPage({ params }) {
   const para = await params;
@@ -14,10 +18,74 @@ export default async function SingleEkdilosiPage({ params }) {
     (ev) => ev.slug === slug
   );
 
+  const isProsexws = prosexwsFlag(event.startDate);
+  let status;
+
+  if (event.status === "ok") status = "προγραμματισμένο";
+  if (event.status === "cancelled") status = "ακυρώθηκε";
+  if (event.status === "postponed") status = "αναβλήθηκε";
+
   return (
     <Suspense fallback={<div className="loader"></div>}>
       <div className="space-y-10 lg:max-w-[65%] mx-auto">
         <h1 className="text-2xl text-primary text-center">{event.title}</h1>
+
+        {isProsexws && (
+          <div
+            className={cn(
+              status === "προγραμματισμένο" && "border-green-700 bg-green-100",
+              status === "αναβλήθηκε" && "border-yellow-700 bg-yellow-100",
+              status === "ακυρώθηκε" && "border-red-700 bg-red-100",
+              "border rounded-lg space-y-4 p-2"
+            )}
+          >
+            <div className="lg:flex lg:items-center lg:justify-between">
+              <h4 className="text-sm hidden lg:block text-start">
+                Λεπτομέρειες για τη προσεχή εκδήλωση
+              </h4>
+
+              <Badge
+                className={cn(
+                  status === "προγραμματισμένο" && "bg-green-600 text-white",
+                  status === "αναβλήθηκε" && "bg-yellow-600 text-white",
+                  status === "ακυρώθηκε" && "bg-red-600 text-white",
+                  "text-xs"
+                )}
+              >
+                {status}
+              </Badge>
+            </div>
+
+            <div className="space-y-2">
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-1">
+                  <Calendar />{" "}
+                  <span>{format(event.startDate, "dd/MM/yyyy")}</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <Clock />
+                  <span>{event.startTime}</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-1">
+                <Map />
+                <a
+                  className="text-blue-500 underline decoration-blue-500"
+                  href={event.location.href}
+                >
+                  {event.location.name}
+                </a>
+              </div>
+
+              {event.notice && (
+                <div className="text-gray-600 pt-4">
+                  <p className="underline">Ενημέρωση:</p>
+                  <p>{event.notice}</p>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
 
         <div className="text-justify space-y-4 text-sm ">
           {event.details &&

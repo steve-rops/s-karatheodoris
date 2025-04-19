@@ -2,6 +2,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { DIFERRENCE_IN_DAYS } from "@/data";
 import { useGetEvents } from "@/hooks/useGetEvents";
 import { differenceInDays, format, isFuture } from "date-fns";
 import { Calendar, Clock, MapPin } from "lucide-react";
@@ -19,12 +20,12 @@ export default function Prosexws() {
     ...mainEvents.filter(
       (ev) =>
         isFuture(ev.startDate) &&
-        differenceInDays(ev.startDate, new Date()) < 30
+        differenceInDays(ev.startDate, new Date()) < DIFERRENCE_IN_DAYS
     ),
     ...secEvents.filter(
       (ev) =>
         isFuture(ev.startDate) &&
-        differenceInDays(ev.startDate, new Date()) < 30
+        differenceInDays(ev.startDate, new Date()) < DIFERRENCE_IN_DAYS
     ),
   ];
 
@@ -80,17 +81,10 @@ export default function Prosexws() {
             </div>
           </div>
 
-          {ev.notice && (
-            <div className="text-gray-600">
-              <p className="underline">Ενημέρωση:</p>
-              <p>{ev.notice}</p>
-            </div>
-          )}
-
           <Link href={`/ekdilosis/${ev.slug}`}>
             <Button
               size="xs"
-              className="p-1 border border-primary"
+              className="w-full p-1 border border-primary"
               variant="outline"
             >
               Λεπτομέρειες

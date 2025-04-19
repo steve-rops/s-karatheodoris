@@ -4,14 +4,9 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useGetEvents } from "@/hooks/useGetEvents";
+import { prosexwsFlag } from "@/lib/utils";
 import { useStore } from "@/store/store";
-import {
-  compareAsc,
-  differenceInDays,
-  format,
-  isFuture,
-  isPast,
-} from "date-fns";
+import { compareAsc, format, isPast } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -33,13 +28,6 @@ export const EkdilosisList = () => {
     if (!aIsPast && bIsPast) return -1;
     return compareAsc(a.startDate, b.startDate);
   });
-
-  const prosexwsFlag = (eventStartDate) => {
-    return (
-      isFuture(eventStartDate) &&
-      differenceInDays(eventStartDate, new Date()) < 30
-    );
-  };
 
   return (
     <div className="space-y-4">

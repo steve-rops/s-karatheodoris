@@ -73,3 +73,5 @@ export const events = [
     status: "ok",
   },
 ];
+
+export const DIFERRENCE_IN_DAYS = 30;
