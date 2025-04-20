@@ -18,6 +18,8 @@ export default async function SingleEkdilosiPage({ params }) {
     (ev) => ev.slug === slug
   );
 
+  const sortedArchive = event.archive?.sort((a, b) => b.year - a.year);
+
   const isProsexws = prosexwsFlag(event.startDate);
   let status;
 
@@ -36,7 +38,7 @@ export default async function SingleEkdilosiPage({ params }) {
               status === "προγραμματισμένο" && "border-green-700 bg-green-100",
               status === "αναβλήθηκε" && "border-yellow-700 bg-yellow-100",
               status === "ακυρώθηκε" && "border-red-700 bg-red-100",
-              "border rounded-lg space-y-4 p-2"
+              "border rounded-lg space-y-4 p-2 lg:w-[65%] mx-auto"
             )}
           >
             <div className="lg:flex lg:items-center lg:justify-between">
@@ -126,28 +128,48 @@ export default async function SingleEkdilosiPage({ params }) {
           <CarouselHomePage opts={{ loop: true }} images={event.images.other} />
         )}
 
-        <div className="space-y-4">
-          <div className="text-primary text-lg text-center">
-            Δείτε περισσότερα για την εκδήλωση
+        {event.links?.length > 0 && (
+          <div className="space-y-4">
+            <div className="text-primary text-lg text-center">
+              Δείτε περισσότερα για την εκδήλωση
+            </div>
+            <div className="flex gap-4 justify-center items-center">
+              {event.links?.length > 0 &&
+                event.links.map((link) => (
+                  <Link target="_blank" key={link.name} href={link.href}>
+                    {link.name.includes("evros") ? (
+                      <Image
+                        alt="e-evros-logo"
+                        width={100}
+                        height={300}
+                        src="/e-evros.png"
+                      />
+                    ) : (
+                      <FacebookIcon size={36} color="var(--color-blue-600)" />
+                    )}
+                  </Link>
+                ))}
+            </div>
           </div>
-          <div className="flex gap-4 justify-center items-center">
-            {event.links?.length > 0 &&
-              event.links.map((link) => (
-                <Link target="_blank" key={link.name} href={link.href}>
-                  {link.name.includes("evros") ? (
-                    <Image
-                      alt="e-evros-logo"
-                      width={100}
-                      height={300}
-                      src="/e-evros.png"
-                    />
-                  ) : (
-                    <FacebookIcon size={36} color="var(--color-blue-600)" />
-                  )}
+        )}
+
+        {event.archive.length > 0 && (
+          <div className="space-y-4">
+            <hr className="bg-primary" />
+            <h3 className="text-lg text-primary text-center">
+              Δείτε φωτογραφικό υλικό από παλαιότερες εκδηλώσεις
+            </h3>
+            <div className="flex flex-col gap-2">
+              {sortedArchive.map((el) => (
+                <Link target="_blank" key={`${el.year}`} href={el.href}>
+                  <div className="border-[0.5px] border-primary rounded-lg p-2 lg:w-[50%] mx-auto text-center hover:bg-primary/10 transition-all duration-200">
+                    {el.name}
+                  </div>
                 </Link>
               ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </Suspense>
   );
