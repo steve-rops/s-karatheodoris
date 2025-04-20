@@ -1,10 +1,15 @@
 import CarouselHomePage from "./_components/Carousel";
-import DoreesHomePage from "./_components/Dorees-homePage";
 import DrastiriotitesHomePage from "./_components/Drastiriotites-homePage";
 import EkdiloseisHomePage from "./_components/Ekdiloseis-homePage";
 import OsilogosHomePage from "./_components/Osilogos-homePage";
 
-const images = ["/mouseio.jpg", "/parathrhthrio.jpg", "/plateia.jpg"];
+const images = [
+  "/main-1.webp",
+  "/plateia.jpg",
+  "/main-3.webp",
+  "/main-4.webp",
+  "/mouseio.webp",
+];
 
 export default function Home() {
   return (
