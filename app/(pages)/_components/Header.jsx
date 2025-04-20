@@ -57,12 +57,12 @@ export default function Header() {
       <nav className="p-2 relative flex items-center justify-between ">
         {/* logo */}
         <div className="flex items-center">
-          <Link href="/">
+          <Link className="relative w-[100px] h-[100px]" href="/">
             <Image
+              priority
+              fill
               src="/sk-logo.svg"
-              className=""
-              width={100}
-              height={100}
+              className="absolute object-cover"
               alt="logo"
             />
           </Link>
