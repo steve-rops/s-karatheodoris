@@ -153,7 +153,7 @@ export default async function SingleEkdilosiPage({ params }) {
           </div>
         )}
 
-        {event.archive.length > 0 && (
+        {event.archive?.length > 0 && (
           <div className="space-y-4">
             <hr className="bg-primary" />
             <h3 className="text-lg text-primary text-center">
