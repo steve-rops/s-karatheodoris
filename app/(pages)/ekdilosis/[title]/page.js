@@ -66,7 +66,7 @@ export default async function SingleEkdilosiPage({ params }) {
                 </div>
                 <div className="flex items-center gap-1">
                   <Clock />
-                  <span>{event.startTime}</span>
+                  <span>{format(event.startDate, "HH:mm")}</span>
                 </div>
               </div>
               <div className="flex items-center gap-1">
