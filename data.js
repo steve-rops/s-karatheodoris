@@ -1,3 +1,9 @@
+import { Beis } from "./components/eventsDescription/Beis";
+import { KatharaDeutera } from "./components/eventsDescription/KatharaDeutera";
+import { KonstantinoyKaiElenis } from "./components/eventsDescription/KonstantinoyKaiElenis";
+import { ParousiasiBibliou23 } from "./components/eventsDescription/ParousiasiBibliou23";
+import { Vysseia } from "./components/eventsDescription/Vysseia";
+
 export const menuLinks = [
   {
     title: "Ο Σύλλογος",
@@ -24,53 +30,35 @@ export const menuLinks = [
 
 export const events = [
   {
-    category: "main",
+    slug: "kostantinouKaiElenis",
     title: "Πανηγύρι Κωνσταντίνου και Ελένης",
-    location: "https://maps.app.goo.gl/8H5vutRsKAqNFoLZA",
-    startDate: new Date("05/21/2025"),
-    endDate: new Date("06/21/2025"),
-    startTime: "19:00",
-    endTime: "01:00",
-    details: "",
-    notice:
-      "Θα ακολουθήσει χορός από τα χoρευτικά τμήματα του Συλλόγου μας, καθώς και για όλο το κόσμο.",
-    status: "ok",
+    from: "",
+    item: () => KonstantinoyKaiElenis(),
   },
   {
-    category: "main",
-    title: "Βύσσεια 2025",
-    location: "",
-    startDate: new Date("07/26/2025"),
-    endDate: new Date("07/30/2025"),
-    startTime: "19:00",
-    endTime: "01:00",
-    details: "",
-    notice: "",
-    status: "ok",
+    slug: "beis",
+    title: "Μπέης",
+    item: () => Beis(),
+    from: `(πηγή: Πρακτικά 3ου Πανελλήνιου Συνεδρίου Ιστορίας και Πολιτισμού της Ορεστιάδας, “Η Ορεστιάδα στον 21ο αιώνα: Προκλήσεις και Προοπτικές”)`,
   },
   {
-    category: "main",
+    slug: "katharaDeutera",
     title: "Καθαρά Δευτέρα",
-    location: "https://maps.app.goo.gl/8H5vutRsKAqNFoLZA",
-    startDate: new Date("03/21/2025"),
-    endDate: new Date("03/21/2025"),
-    startTime: "07:00",
-    endTime: "18:00",
-    details: "",
-    notice: "",
-    status: "ok",
+    item: () => KatharaDeutera(),
+    from: "",
   },
   {
-    category: "main",
-    title: "Μπέης 2026",
-    location: "https://maps.app.goo.gl/8H5vutRsKAqNFoLZA",
-    startDate: new Date("03/21/2025"),
-    endDate: new Date("03/21/2025"),
-    startTime: "07:00",
-    endTime: "18:00",
-    details: "",
-    notice: "",
-    status: "ok",
+    slug: "vysseia",
+    title: "Βύσσεια",
+    paragraps: [``],
+    item: () => Vysseia(),
+    from: "",
+  },
+  {
+    slug: "parousiasiBibliou-23",
+    title: "Παρουσίαση Βιβλίου",
+    item: () => ParousiasiBibliou23(),
+    from: "",
   },
 ];
 

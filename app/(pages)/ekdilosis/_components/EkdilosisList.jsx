@@ -1,13 +1,10 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useGetEvents } from "@/hooks/useGetEvents";
 import { prosexwsFlag } from "@/lib/utils";
 import { useStore } from "@/store/store";
 import { compareAsc, format, isPast } from "date-fns";
-import Image from "next/image";
 import { EventItem } from "./EventItem";
 
 export const EkdilosisList = () => {

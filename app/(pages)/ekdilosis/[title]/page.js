@@ -8,6 +8,7 @@ import { cn, prosexwsFlag } from "@/lib/utils";
 import { Calendar, Clock, Map } from "lucide-react";
 import { format } from "date-fns";
 import { Badge } from "@/components/ui/badge";
+import { events } from "@/data";
 
 export default async function SingleEkdilosiPage({ params }) {
   const para = await params;
@@ -18,6 +19,7 @@ export default async function SingleEkdilosiPage({ params }) {
     (ev) => ev.slug === slug
   );
 
+  const localEvent = events.find((ev) => ev.slug === slug);
   const sortedArchive = event.archive?.sort((a, b) => b.year - a.year);
 
   const isProsexws = prosexwsFlag(event.startDate);
@@ -66,7 +68,7 @@ export default async function SingleEkdilosiPage({ params }) {
                 </div>
                 <div className="flex items-center gap-1">
                   <Clock />
-                  <span>{format(event.startDate, "HH:mm")}</span>
+                  <span>{event.startTime}</span>
                 </div>
               </div>
               <div className="flex items-center gap-1">
@@ -89,12 +91,14 @@ export default async function SingleEkdilosiPage({ params }) {
           </div>
         )}
 
-        <div className="text-justify space-y-4 text-sm ">
-          {event.details &&
-            event.details
-              .split("#")
-              .map((el) => <p key={el.slice(0, 10)}>{el}</p>)}
-        </div>
+        {localEvent.item && (
+          <div className="text-justify space-y-2 text-sm ">
+            {localEvent.item()}
+            {localEvent.from && (
+              <div className="text-xs text-gray-500">{localEvent.from}</div>
+            )}
+          </div>
+        )}
 
         {event.images.other.length === 1 && (
           <div className="relative w-full h-56 lg:w-48">
