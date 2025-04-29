@@ -1,13 +1,13 @@
 export const ParousiasiBibliou23 = () => {
   return (
-    <div className="text-justify space-y-4 text-sm lg:text-[16px]">
-      <p>
+    <div className=" space-y-4 text-sm lg:text-[16px]">
+      <p className="text-center">
         “Το τρισυπόστατο του χορού στη Νέα Βύσσα Έβρου 100 χρόνια προσφυγικής
         πολιτισμικής παρουσίας”
       </p>
-      <p>της Δρ. Ελένης Φιλιππίδου</p>
+      <p className="text-center">της Δρ. Ελένης Φιλιππίδου</p>
       <h2>Ομιλητές:</h2>
-      <ul className="list-disc list-inside">
+      <ul className="list-disc">
         <li>
           <strong>Δρ. Μαρία Κουτσούμπα</strong>: Καθηγήτρια Χορολογίας του
           Εθνικού και Καποδιστριακού Πανεπιστημίου Αθηνών.
@@ -26,6 +26,17 @@ export const ParousiasiBibliou23 = () => {
           βιβλίου.
         </li>
       </ul>
+      <p>Συντονισμός:</p>
+      <ul className="list-disc">
+        <li>
+          <strong>Ελένη Καϊκλή</strong>: Εκπαιδευτικός
+        </li>
+      </ul>
+
+      <p>
+        Παρουσίαση χορών, ενδυμασιών, εθίμων και τραγουδιών της Νέας Βύσσας από
+        τα μέλη του πολιτιστικού μας συλλόγου.
+      </p>
     </div>
   );
 };
