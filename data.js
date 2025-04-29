@@ -2,6 +2,7 @@ import { Beis } from "./components/eventsDescription/Beis";
 import { KatharaDeutera } from "./components/eventsDescription/KatharaDeutera";
 import { KonstantinoyKaiElenis } from "./components/eventsDescription/KonstantinoyKaiElenis";
 import { ParousiasiBibliou23 } from "./components/eventsDescription/ParousiasiBibliou23";
+import { SinedrioThermodinamikis2023 } from "./components/eventsDescription/SinedrioThermodinamikis2023";
 import { Vysseia } from "./components/eventsDescription/Vysseia";
 
 export const menuLinks = [
@@ -58,6 +59,12 @@ export const events = [
     slug: "parousiasiBibliou-23",
     title: "Παρουσίαση Βιβλίου",
     item: () => ParousiasiBibliou23(),
+    from: "",
+  },
+  {
+    slug: "sinedrioThermodinamikis2023",
+    title: `Συνέδριο Θερμοδυναμικής "Κωνσταντίνος Καραθεοδωρή"`,
+    item: () => SinedrioThermodinamikis2023(),
     from: "",
   },
 ];
