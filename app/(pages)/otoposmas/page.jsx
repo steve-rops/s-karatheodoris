@@ -26,7 +26,7 @@ export default function OtoposmasPage() {
         <p className="text-justify text-sm lg:text-[16px]">
           Το 1923 περίπου χίλιοι πρόσφυγες προερχόμενοι από το Βοσνοχώρι ή παλιά
           Βύσσα, που βρισκόταν κοντά στην Αδριανούπολη, εγκαταστάθηκαν στη
-          σημερινή τοποθεσία του χωριού, 4 χμ. νοτιότερα από το παλιό χωριό. Οι
+          σημερινή τοποθεσία του χωριού, 4 χλμ. νοτιότερα από το παλιό χωριό. Οι
           περισσότεροι από αυτούς ήταν επαγγελματίες που δεν γνώριζαν τη γεωργία
           και ζούσαν με το όνειρο να επιστρέψουν στη γη τους. Αυτό το όνειρο
           κρατήθηκε ζωντανό από το γεγονός ότι μπορούσαν να ατενίσουν τα σπίτια
@@ -93,10 +93,21 @@ export default function OtoposmasPage() {
           συναντάς είναι η <strong>βιομηχανική περιοχή του χωριού</strong> και
           επειτα στα αριστερά σας εμφανίζονται το{" "}
           <strong>Γυμνάσιο και το Λύκειο της Νέας Βύσσας</strong>, ένας
-          σημαντικός εκπαιδευτικός πυρήνας της περιοχής. Φτάνοντας στις{" "}
-          <strong>σιδηροδρομικές γραμμές</strong>, μπορείτε να στρίψετε αριστερά
-          για να εξερευνήσετε το <strong>πάνω χωριό</strong>. Η πρώτη σημαντική
-          στάση είναι το{" "}
+          σημαντικός εκπαιδευτικός πυρήνας της περιοχής.
+        </p>
+        <div className="relative w-full h-80 lg:w-[500px] lg:mx-auto">
+          <Image
+            priority
+            src="/o-topos-mas/gimnasio-likeio.jpg"
+            fill
+            className="absolute object-cover"
+            alt="o-silogos-image"
+          />
+        </div>
+        <p>
+          Φτάνοντας στις <strong>σιδηροδρομικές γραμμές</strong>, μπορείτε να
+          στρίψετε αριστερά για να εξερευνήσετε το <strong>πάνω χωριό</strong>.
+          Η πρώτη σημαντική στάση είναι το{" "}
           <a
             href="/mouseio-karatheodori"
             className="text-blue-700 hover:cursor-pointer"
@@ -108,14 +119,46 @@ export default function OtoposmasPage() {
           <strong>εκκλησία των Αγίων Κωνσταντίνου και Ελένης</strong>, ένας
           χώρος πνευματικής γαλήνης και πίστης.
         </p>
+        <div className="flex gap-2">
+          <div className="relative w-full h-80 lg:w-[500px] lg:mx-auto">
+            <Image
+              priority
+              src="/o-topos-mas/ekklisia-pano.jpg"
+              fill
+              className="absolute object-cover"
+              alt="o-silogos-image"
+            />
+          </div>
+          <div className="relative w-full h-80 lg:w-[500px] lg:mx-auto">
+            <Image
+              priority
+              src="/o-topos-mas/mouseioo.jpg"
+              fill
+              className="absolute object-cover"
+              alt="o-silogos-image"
+            />
+          </div>
+        </div>
+
         <p className="text-sm lg:text-[16px]">
           Συνεχίζοντας, μπορείτε να κάνετε μια στάση στο{" "}
-          <strong>παρατηρητήριο</strong> Νέας Βύσσας και το μικρό{" "}
-          <strong>εκκλησάκι</strong> που βρίσκεται εκεί. Από αυτό το σημείο,
-          μπορείτε να απολαύσετε μια εκπληκτική θέα προς την Τουρκία και να
-          χαλαρώσετε στο αναψυκτήριο, απολαμβάνοντας έναν καφέ ή ένα ρόφημα σε
-          ένα από τα πιο όμορφα σημεία του χωριού.
+          <strong>παρατηρητήριο</strong> Νέας Βύσσας και το{" "}
+          <strong> Ιερό εξωκκλήσι Αγίου Ιωάννη του Προδρόμου</strong> που
+          βρίσκεται εκεί. Από αυτό το σημείο, μπορείτε να απολαύσετε μια
+          εκπληκτική θέα προς την Τουρκία και να χαλαρώσετε στο αναψυκτήριο,
+          απολαμβάνοντας έναν καφέ ή ένα ρόφημα σε ένα από τα πιο όμορφα σημεία
+          του χωριού.
         </p>
+        <div className="relative w-full h-80 lg:w-[500px] lg:mx-auto">
+          <Image
+            priority
+            src="/o-topos-mas/parat.jpg"
+            fill
+            className="absolute object-cover"
+            alt="o-silogos-image"
+          />
+        </div>
+
         <p className="text-sm lg:text-[16px]">
           Κατεβαίνοντας προς το <strong>κάτω χωριό</strong>, διασχίζετε και πάλι
           τις γραμμές του τρένου. Στα δεξιά σας βρίσκεται το{" "}
@@ -159,6 +202,26 @@ export default function OtoposmasPage() {
           και ηρεμία, ενώ ο αρχιτεκτονικός του σχεδιασμός διατηρεί στοιχεία της
           παραδοσιακής βυζαντινής τεχνοτροπίας.
         </p>
+        <div className="flex gap-2">
+          <div className="relative w-full h-80 lg:w-[500px] lg:mx-auto">
+            <Image
+              priority
+              src="/o-topos-mas/agiaParaskeuh-1.jpg"
+              fill
+              className="absolute object-cover"
+              alt="o-silogos-image"
+            />
+          </div>
+          <div className="relative w-full h-80 lg:w-[500px] lg:mx-auto">
+            <Image
+              priority
+              src="/o-topos-mas/agiaParaskeuh-2.jpg"
+              fill
+              className="absolute object-cover"
+              alt="o-silogos-image"
+            />
+          </div>
+        </div>
       </div>
 
       <p className="text-sm text-justify lg:text-[16px]">

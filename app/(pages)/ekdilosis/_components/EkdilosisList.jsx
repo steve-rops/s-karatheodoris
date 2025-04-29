@@ -5,11 +5,11 @@ import { useGetEvents } from "@/hooks/useGetEvents";
 import { prosexwsFlag } from "@/lib/utils";
 import { compareAsc, format, isPast } from "date-fns";
 import { EventItem } from "./EventItem";
-import { useState } from "react";
+import { useEkdilContext } from "@/context/ekdilosisContext";
 
 export const EkdilosisList = () => {
   const { data, isLoading } = useGetEvents();
-  const [events, setEvents] = useState("main");
+  const { events, setEvents } = useEkdilContext();
   let chosenData = [];
 
   if (isLoading) return <EkdilosisListSkeleton />;
