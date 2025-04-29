@@ -1,19 +1,15 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useGetEvents } from "@/hooks/useGetEvents";
 import { prosexwsFlag } from "@/lib/utils";
-import { useStore } from "@/store/store";
 import { compareAsc, format, isPast } from "date-fns";
-import Image from "next/image";
 import { EventItem } from "./EventItem";
+import { useState } from "react";
 
 export const EkdilosisList = () => {
   const { data, isLoading } = useGetEvents();
-  const events = useStore((state) => state.eventType);
-  const setEvents = useStore((state) => state.setEventType);
+  const [events, setEvents] = useState("main");
   let chosenData = [];
 
   if (isLoading) return <EkdilosisListSkeleton />;
