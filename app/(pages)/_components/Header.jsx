@@ -7,8 +7,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Image from "next/image";
-import InstaIcon from "@/public/insta";
 import { ChevronDown, Mail } from "lucide-react";
+import { FaInstagram, FaFacebook, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
 import Hamburger from "./Hamburger";
 import FacebookIcon from "@/public/facebook";
@@ -25,21 +25,21 @@ export default function Header() {
             rel="noopener noreferrer"
             href={`https://www.instagram.com/s.karatheodori?igsh=MTNldzlnOGY0bmZ3ZA==`}
           >
-            <InstaIcon color="var(--muted)" size={24} />
+            <FaInstagram size={24} className="hover:text-white" />
           </Link>
           <Link
             target="_blank"
             rel="noopener noreferrer"
             href={`https://www.facebook.com/share/16B6jDaqTU/`}
           >
-            <FacebookIcon color="var(--muted)" size={24} />
+            <FaFacebook size={24} className="hover:text-white" />
           </Link>
           <Link
             href="mailto:skaratheodoris@yahoo.gr"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Mail size={26} className="text-secondary" />
+            <FaEnvelope size={24} className="hover:text-white" />
           </Link>
         </div>
 

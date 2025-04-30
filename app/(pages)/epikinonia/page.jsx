@@ -4,7 +4,7 @@ import { CheckCircle, Mail, MapPin, Phone, Smartphone } from "lucide-react";
 import Link from "next/link";
 import Submit from "./_components/Submit";
 import { handleSubmit } from "@/app/actions";
-import InstaIcon from "@/public/insta";
+import { FaInstagram, FaFacebook, FaEnvelope } from "react-icons/fa";
 import FacebookIcon from "@/public/facebook";
 import { useState } from "react";
 
@@ -56,10 +56,10 @@ export default function EpikinoniaPage() {
             </Link>
           </div>
         </div>
-        <div className="flex gap-1 items-center">
+        <div className="flex gap-1 items-start hover:text-black">
           <MapPin size={16} />
           <Link
-            className="text-sm hover:text-black"
+            className="text-sm "
             href="https://maps.app.goo.gl/pZjwGypP2oECv5d58"
             target="_blank"
             rel="noopener noreferrer"
@@ -76,21 +76,21 @@ export default function EpikinoniaPage() {
               rel="noopener noreferrer"
               href={`https://www.instagram.com/s.karatheodori?igsh=MTNldzlnOGY0bmZ3ZA==`}
             >
-              <InstaIcon color="var(--color-gray-600)" size={30} />
+              <FaInstagram size={30} className="hover:text-primary" />
             </Link>
             <Link
               target="_blank"
               rel="noopener noreferrer"
               href={`https://www.facebook.com/share/16B6jDaqTU/`}
             >
-              <FacebookIcon color="var(--color-gray-600)" size={30} />
+              <FaFacebook size={30} className="hover:text-primary" />
             </Link>
             <Link
               href="mailto:skaratheodoris@yahoo.gr"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Mail size={30} className="text-gray-600" />
+              <FaEnvelope size={30} className="hover:text-primary" />
             </Link>
           </div>
         </div>
