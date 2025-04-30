@@ -101,7 +101,7 @@ export default async function SingleEkdilosiPage({ params }) {
         )}
 
         {event.images.other.length === 1 && (
-          <div className="relative w-full h-56 lg:w-48">
+          <div className="relative w-full h-50 lg:h-80 lg:w-[500px] lg:mx-auto">
             <Image
               priority
               src={event.images.other[0]}
@@ -129,7 +129,12 @@ export default async function SingleEkdilosiPage({ params }) {
         )}
 
         {event.images.other.length > 2 && (
-          <CarouselHomePage opts={{ loop: true }} images={event.images.other} />
+          <div className="w-full">
+            <CarouselHomePage
+              opts={{ loop: true }}
+              images={event.images.other}
+            />
+          </div>
         )}
 
         {event.links?.length > 0 && (

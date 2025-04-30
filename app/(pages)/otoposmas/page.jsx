@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function OtoposmasPage() {
   return (
-    <div className="lg:max-w-[65%]  lg:mx-auto space-y-14">
+    <div className="lg:max-w-[65%] text-sm lg:text-[16px] lg:mx-auto space-y-14">
       <div className="space-y-2 text-justify">
         <h1 className="text-2xl text-primary text-center">Ο Τόπος μας</h1>
         <p className="text-justify ">
@@ -275,12 +275,24 @@ export default function OtoposmasPage() {
         </div>
       </div>
 
-      <p className="text-sm text-justify lg:text-[16px]">
+      <p className="text-justify ">
         Η Νέα Βύσσα είναι ένας τόπος που συνδυάζει{" "}
         <strong>ιστορία, παράδοση και φυσική ομορφιά</strong>. Αν ψάχνετε έναν
         προορισμό μακριά από τον μαζικό τουρισμό, όπου μπορείτε να απολαύσετε
         την αυθεντική ελληνική φιλοξενία, να εξερευνήσετε τη φύση και να
         γευτείτε μοναδικές τοπικές γεύσεις, τότε η Νέα Βύσσα σας περιμένει!
+      </p>
+
+      <p className="text-gray-500 text-xs text-justify">
+        Οι φωτογραφίες και τα πλάνα από το drone είναι ευγενική χορηγία του
+        Πατσιναρίδη Γεώργιου από το βίντεο του:{" "}
+        <a
+          href="https://www.youtube.com/watch?v=o7LxMaDuL28"
+          target="_blank"
+          className="text-blue-400 hover:cursor-pointer"
+        >
+          Nea Vyssa [Cinematic Scenes]
+        </a>
       </p>
     </div>
   );
