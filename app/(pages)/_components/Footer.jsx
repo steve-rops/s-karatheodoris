@@ -1,6 +1,6 @@
 import FacebookIcon from "@/public/facebook";
-import InstaIcon from "@/public/insta";
 import { Mail, MapPin, Phone, Smartphone } from "lucide-react";
+import { FaInstagram, FaFacebook, FaEnvelope } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -33,25 +33,26 @@ export default function Footer() {
             <div className="w-full flex justify-center">
               <div className="text-[var(--muted)] p-2 flex items-center gap-4">
                 <Link
+                  className="hover:text-white"
                   target="_blank"
                   rel="noopener noreferrer"
                   href={`https://www.instagram.com/s.karatheodori?igsh=MTNldzlnOGY0bmZ3ZA==`}
                 >
-                  <InstaIcon color="var(--muted)" size={30} />
+                  <FaInstagram size={30} />
                 </Link>
                 <Link
                   target="_blank"
                   rel="noopener noreferrer"
                   href={`https://www.facebook.com/share/16B6jDaqTU/`}
                 >
-                  <FacebookIcon color="var(--muted)" size={30} />
+                  <FaFacebook size={30} className="hover:text-white" />
                 </Link>
                 <Link
                   href="mailto:skaratheodoris@yahoo.gr"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Mail size={30} className="text-secondary" />
+                  <FaEnvelope size={30} className="hover:text-white" />
                 </Link>
               </div>
             </div>
