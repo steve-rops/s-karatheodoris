@@ -85,6 +85,17 @@ export default function OtoposmasPage() {
           <strong>σκόρδο</strong> αποτελώντας έτσι έναν αυθεντικό προορισμό στη
           Θράκη.
         </p>
+
+        <div className="relative w-full h-50 lg:h-80 lg:w-[500px] lg:mx-auto">
+          <Image
+            priority
+            src="/o-topos-mas/xwrio-1.jpg"
+            fill
+            className="absolute object-cover "
+            alt="o-silogos-image"
+          />
+        </div>
+
         <p className="text-sm lg:text-[16px]">
           Σας προσκαλούμε να τη γνωρίσετε κάνοντας μια περιήγηση...{" "}
         </p>
@@ -95,14 +106,27 @@ export default function OtoposmasPage() {
           <strong>Γυμνάσιο και το Λύκειο της Νέας Βύσσας</strong>, ένας
           σημαντικός εκπαιδευτικός πυρήνας της περιοχής.
         </p>
-        <div className="relative w-full h-80 lg:w-[500px] lg:mx-auto">
-          <Image
-            priority
-            src="/o-topos-mas/gimnasio-likeio.jpg"
-            fill
-            className="absolute object-cover"
-            alt="o-silogos-image"
-          />
+
+        <div className="flex flex-col lg:flex-row gap-2">
+          <div className="relative w-full h-80 lg:w-[500px] lg:mx-auto">
+            <Image
+              priority
+              src="/o-topos-mas/vyssa.jpg"
+              fill
+              className="absolute object-cover object-[35%_40%] "
+              alt="o-silogos-image"
+            />
+          </div>
+
+          <div className="relative w-full h-80 lg:w-[500px] lg:mx-auto">
+            <Image
+              priority
+              src="/o-topos-mas/gimnasio-likeio.jpg"
+              fill
+              className="absolute object-cover"
+              alt="o-silogos-image"
+            />
+          </div>
         </div>
         <p>
           Φτάνοντας στις <strong>σιδηροδρομικές γραμμές</strong>, μπορείτε να
@@ -119,7 +143,7 @@ export default function OtoposmasPage() {
           <strong>εκκλησία των Αγίων Κωνσταντίνου και Ελένης</strong>, ένας
           χώρος πνευματικής γαλήνης και πίστης.
         </p>
-        <div className="flex gap-2">
+        <div className="flex flex-col lg:flex-row gap-2">
           <div className="relative w-full h-80 lg:w-[500px] lg:mx-auto">
             <Image
               priority
@@ -165,14 +189,41 @@ export default function OtoposmasPage() {
           <strong>γήπεδο ποδοσφαίρου</strong> και το{" "}
           <strong>κλειστό στάδιο</strong>, όπου αθλούνται και γυμνάζονται οι
           κάτοικοι του χωριού, ενώ κατά καιρους πραγματοποιούνται αγώνες και
-          προπονήσεις από τοπικές ομάδες. Αν συνεχίσετε ευθεία, ο δρόμος σας
-          οδηγεί στην πλατεία της Νέας Βύσσας. Εκεί δεσπόζει ο Ιερός Ναός του
-          Αγίου Γεωργίου, ένα σημαντικό θρησκευτικό και ιστορικό σημείο του
-          χωριού. Στα δεξιά του βρίσκεται το πολιτιστικό κέντρο του χωριού, όπου
-          στεγάζεται και ο <strong>πολιτιστικός μας σύλλογος</strong>. Στην
-          πλατεία θα βρείτε επίσης εξαιρετικές <strong>ταβέρνες</strong>, όπου
-          μπορείτε να δοκιμάσετε παραδοσιακές θρακιώτικες γεύσεις και κρέατα
-          αλλά και να απολαύσετε την τοπική φιλοξενία.
+          προπονήσεις από τοπικές ομάδες.
+        </p>
+
+        <div className="relative w-full h-56 lg:h-80 lg:w-[500px] lg:mx-auto">
+          <Image
+            priority
+            src="/o-topos-mas/gipedo.jpg"
+            fill
+            className="absolute object-cover "
+            alt="o-silogos-image"
+          />
+        </div>
+
+        <p>
+          Αν συνεχίσετε ευθεία, ο δρόμος σας οδηγεί στην πλατεία της Νέας
+          Βύσσας. Εκεί δεσπόζει ο Ιερός Ναός του Αγίου Γεωργίου, ένα σημαντικό
+          θρησκευτικό και ιστορικό σημείο του χωριού. Στα δεξιά του βρίσκεται το
+          πολιτιστικό κέντρο του χωριού, όπου στεγάζεται και ο{" "}
+          <strong>πολιτιστικός μας σύλλογος</strong>.
+        </p>
+
+        <div className="relative w-full h-50 lg:h-80 lg:w-[500px] lg:mx-auto">
+          <Image
+            priority
+            src="/o-topos-mas/ekklhsia-silogos.jpg"
+            fill
+            className="absolute object-cover "
+            alt="o-silogos-image"
+          />
+        </div>
+
+        <p>
+          Στην πλατεία θα βρείτε επίσης εξαιρετικές <strong>ταβέρνες</strong>,
+          όπου μπορείτε να δοκιμάσετε παραδοσιακές θρακιώτικες γεύσεις και
+          κρέατα αλλά και να απολαύσετε την τοπική φιλοξενία.
         </p>
       </div>
 
@@ -202,7 +253,7 @@ export default function OtoposmasPage() {
           και ηρεμία, ενώ ο αρχιτεκτονικός του σχεδιασμός διατηρεί στοιχεία της
           παραδοσιακής βυζαντινής τεχνοτροπίας.
         </p>
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-col lg:flex-row">
           <div className="relative w-full h-80 lg:w-[500px] lg:mx-auto">
             <Image
               priority
