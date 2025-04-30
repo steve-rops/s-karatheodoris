@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function OtoposmasPage() {
   return (
-    <div className="lg:max-w-[65%] lg:mx-auto space-y-6">
+    <div className="lg:max-w-[65%]  lg:mx-auto space-y-14">
       <div className="space-y-2 text-justify">
         <h1 className="text-2xl text-primary text-center">Ο Τόπος μας</h1>
-        <p className="text-justify text-sm lg:text-[16px]">
+        <p className="text-justify ">
           Η <strong>Νέα Βύσσα</strong> είναι ένα χωριό που βρίσκεται στο
           βορειοανατολικό τμήμα του νομού Έβρου κοντά στα σύνορα με την Τουρκία.
           Ο λαός και το όνομά της προέρχεται κατά πάσα πιθανότητα από τον
@@ -23,7 +23,7 @@ export default function OtoposmasPage() {
           />
         </div>
 
-        <p className="text-justify text-sm lg:text-[16px]">
+        <p className="text-justify ">
           Το 1923 περίπου χίλιοι πρόσφυγες προερχόμενοι από το Βοσνοχώρι ή παλιά
           Βύσσα, που βρισκόταν κοντά στην Αδριανούπολη, εγκαταστάθηκαν στη
           σημερινή τοποθεσία του χωριού, 4 χλμ. νοτιότερα από το παλιό χωριό. Οι
@@ -34,7 +34,7 @@ export default function OtoposmasPage() {
           κατέστρεφε τις καλλιέργειες.
         </p>
 
-        <p className="text-justify text-sm lg:text-[16px]">
+        <p className="text-justify ">
           Το 1958, μετά την κατασκευή προστατευτικών τοιχωμάτων κατά μήκος των
           όχθεων του ποταμού, η καλλιέργεια της πατάτας, του σκόρδου, των
           σπαραγγιών και του σιταριού έγινε αποτελεσματική. Αυτό βοήθησε το
@@ -53,7 +53,7 @@ export default function OtoposmasPage() {
           />
         </div>
 
-        <p className="text-justify text-sm lg:text-[16px]">
+        <p className="text-justify ">
           Η τεχνική δόμησης των σπιτιών στη Νέα Βύσσα αντικατοπτρίζει έντονα την
           αστική παράδοση της Αδριανούπολης. Μιλώντας για την αστική παράδοση
           της Νέας Βύσσας, το ντύσιμο των γυναικών θεωρείται μοναδικό σε όλη τη
@@ -64,7 +64,7 @@ export default function OtoposmasPage() {
           χρυσά νομίσματα.
         </p>
 
-        <p className="text-justify text-sm lg:text-[16px]">
+        <p className="text-justify ">
           Το χορευτικό ρεπερτόριο της Νέας Βύσσας αποτελείται από δέκα χορούς.
           Οι χοροί αυτοί χαρακτηρίζονται από απαλό, ήρεμο ρυθμό και γλυκές
           μελωδίες, που τους κάνουν να ξεχωρίζουν από τους άλλους χορούς της
@@ -78,7 +78,7 @@ export default function OtoposmasPage() {
           Το χωριό μας σήμερα
         </h3>
 
-        <p className="text-sm lg:text-[16px]">
+        <p className="">
           Η <strong>Νέα Βύσσα</strong> σήμερα είναι ένα από τα μεγαλύτερα χωριά
           του Έβρου. Πέρα από την πλούσια ιστορία της είναι γνωστή και για τη
           θερμή φιλοξενία των κατοίκων και φυσικά για το ξακουστό της{" "}
@@ -96,10 +96,10 @@ export default function OtoposmasPage() {
           />
         </div>
 
-        <p className="text-sm lg:text-[16px]">
+        <p className="">
           Σας προσκαλούμε να τη γνωρίσετε κάνοντας μια περιήγηση...{" "}
         </p>
-        <p className="text-sm lg:text-[16px]">
+        <p className="">
           Μπαίνοντας στη Νέα Βύσσα από την κύρια είσοδο, η πρώτη εικόνα που
           συναντάς είναι η <strong>βιομηχανική περιοχή του χωριού</strong> και
           επειτα στα αριστερά σας εμφανίζονται το{" "}
@@ -164,7 +164,7 @@ export default function OtoposmasPage() {
           </div>
         </div>
 
-        <p className="text-sm lg:text-[16px]">
+        <p className="">
           Συνεχίζοντας, μπορείτε να κάνετε μια στάση στο{" "}
           <strong>παρατηρητήριο</strong> Νέας Βύσσας και το{" "}
           <strong> Ιερό εξωκκλήσι Αγίου Ιωάννη του Προδρόμου</strong> που
@@ -173,7 +173,7 @@ export default function OtoposmasPage() {
           απολαμβάνοντας έναν καφέ ή ένα ρόφημα σε ένα από τα πιο όμορφα σημεία
           του χωριού.
         </p>
-        <div className="relative w-full h-80 lg:w-[500px] lg:mx-auto">
+        <div className="relative w-full h-50 lg:h-80 lg:w-[500px] lg:mx-auto">
           <Image
             priority
             src="/o-topos-mas/parat.jpg"
@@ -183,7 +183,7 @@ export default function OtoposmasPage() {
           />
         </div>
 
-        <p className="text-sm lg:text-[16px]">
+        <p className="">
           Κατεβαίνοντας προς το <strong>κάτω χωριό</strong>, διασχίζετε και πάλι
           τις γραμμές του τρένου. Στα δεξιά σας βρίσκεται το{" "}
           <strong>γήπεδο ποδοσφαίρου</strong> και το{" "}
@@ -231,7 +231,7 @@ export default function OtoposmasPage() {
         <h3 className="text-center text-primary text-lg">
           Ιερά Μονή Αγίας Σκέπης και Αγίας Παρασκευής
         </h3>
-        <p className="text-sm lg:text-[16px]">
+        <p className="">
           Ένα από τα πιο ιδιαίτερα αξιοθέατα της Νέας Βύσσας είναι η
           νεοιδρυθείσα Ιερά Μονή Αγ. Σκέπης και Αγ. Παρασκευής που βρίσκεται
           στην τοποθεσία «Αγ. Παρασκευή» σε μικρή απόσταση από το χωριό. Αρχικά,
