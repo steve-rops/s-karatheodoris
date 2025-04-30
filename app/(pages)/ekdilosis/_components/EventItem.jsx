@@ -27,7 +27,7 @@ export const EventItem = ({ event, isProsexws }) => {
             src={event.images?.baner || "/plateia.jpg"}
             alt="Event Banner"
             fill
-            className="rounded-t-lg object-cover"
+            className="rounded-t-lg object-cover object-[40%]"
           />
         </div>
       </Link>

@@ -14,7 +14,10 @@ import { useEffect, useState } from "react";
 
 export default function CarouselHomePage({ opts, images }) {
   const pathname = usePathname();
-  const lgWidth = pathname.includes("ekdilosi") ? "lg:w-[75%]" : "lg:w-[50%]";
+  let lgWidth = "lg:w-[50%]";
+
+  if (pathname.includes("ekdilosi")) lgWidth = "lg:w-[75%]";
+  if (pathname.includes("mouseio")) lgWidth = "lg:w-[75%]";
   const [dotIndex, setDotIndex] = useState(0);
   const [api, setApi] = useState(null);
 

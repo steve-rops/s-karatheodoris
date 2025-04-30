@@ -1,6 +1,7 @@
 import { Beis } from "./components/eventsDescription/Beis";
 import { KatharaDeutera } from "./components/eventsDescription/KatharaDeutera";
 import { KonstantinoyKaiElenis } from "./components/eventsDescription/KonstantinoyKaiElenis";
+import { MnhmosKaratheodori } from "./components/eventsDescription/MnhmosKaratheodori";
 import { ParousiasiBibliou23 } from "./components/eventsDescription/ParousiasiBibliou23";
 import { SinedrioThermodinamikis2023 } from "./components/eventsDescription/SinedrioThermodinamikis2023";
 import { Vysseia } from "./components/eventsDescription/Vysseia";
@@ -37,6 +38,12 @@ export const events = [
     item: () => KonstantinoyKaiElenis(),
   },
   {
+    slug: "mnhmosKaratheodori",
+    title: "Μνημόσυνο Καραθεοδωρή",
+    from: "",
+    item: () => MnhmosKaratheodori(),
+  },
+  {
     slug: "beis",
     title: "Μπέης",
     item: () => Beis(),
@@ -51,7 +58,6 @@ export const events = [
   {
     slug: "vysseia",
     title: "Βύσσεια",
-    paragraps: [``],
     item: () => Vysseia(),
     from: "",
   },

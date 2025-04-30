@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CarouselHomePage from "../_components/Carousel";
 
 export default function MouseioKaratheodori() {
   return (
@@ -8,7 +9,7 @@ export default function MouseioKaratheodori() {
           Μουσείο των Καραθεοδωρή
         </h1>
 
-        <div className="relative w-full h-72 lg:w-[500px] lg:mx-auto">
+        {/* <div className="relative w-full h-72 lg:w-[500px] lg:mx-auto">
           <Image
             priority
             src="/mouseio.webp"
@@ -16,7 +17,17 @@ export default function MouseioKaratheodori() {
             className="absolute object-cover"
             alt="o-silogos-image"
           />
-        </div>
+        </div> */}
+
+        <CarouselHomePage
+          opts={{ loop: true }}
+          images={[
+            "/mouseioKaratheodori/mouseio.webp",
+            "/mouseioKaratheodori/mouseio1.jpg",
+            "/mouseioKaratheodori/mouseio2.jpg",
+            "/mouseioKaratheodori/mouseio3.jpg",
+          ]}
+        />
 
         <div className="text-justify">
           Το <strong>Μουσείο των Καραθεοδωρή</strong> βρίσκεται στη Νέα Βύσσα
