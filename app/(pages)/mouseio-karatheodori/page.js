@@ -5,13 +5,13 @@ export default function MouseioKaratheodori() {
     <div className="lg:max-w-[65%] lg:mx-auto space-y-10">
       <div className="space-y-4">
         <h1 className="text-2xl text-primary text-center">
-          Μουσείο Καραθεοδωρή
+          Μουσείο των Καραθεοδωρή
         </h1>
 
         <div className="relative w-full h-72 lg:w-[500px] lg:mx-auto">
           <Image
             priority
-            src="/mouseio.jpg"
+            src="/mouseio.webp"
             fill
             className="absolute object-cover"
             alt="o-silogos-image"

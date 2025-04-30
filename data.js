@@ -18,7 +18,7 @@ export const menuLinks = [
     title: "Μουσεία",
     links: [
       {
-        title: "Μουσείο Καραθεοδωρή",
+        title: "Μουσείο των Καραθεοδωρή",
         href: "/mouseio-karatheodori",
       },
       { title: "Λαογραφικό Μουσείο", href: "/mouseio-laografiko" },
