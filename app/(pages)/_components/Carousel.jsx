@@ -50,7 +50,7 @@ export default function CarouselHomePage({ opts, images }) {
         Autoplay({
           delay: 4500,
           stopOnInteraction: false,
-          stopOnMouseEnter: false,
+          stopOnMouseEnter: true,
         }),
       ]}
     >
