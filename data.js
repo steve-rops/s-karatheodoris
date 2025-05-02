@@ -1,6 +1,8 @@
 import { Beis } from "./components/eventsDescription/Beis";
+import { DiethnisMeraMouseiwn } from "./components/eventsDescription/DiethnisMeraMouseiwn";
 import { KatharaDeutera } from "./components/eventsDescription/KatharaDeutera";
 import { KonstantinoyKaiElenis } from "./components/eventsDescription/KonstantinoyKaiElenis";
+import { MathimatikoSynedrio } from "./components/eventsDescription/MathimatikoSynedrio";
 import { MnhmosKaratheodori } from "./components/eventsDescription/MnhmosKaratheodori";
 import { ParousiasiBibliou23 } from "./components/eventsDescription/ParousiasiBibliou23";
 import { SinedrioThermodinamikis2023 } from "./components/eventsDescription/SinedrioThermodinamikis2023";
@@ -72,6 +74,18 @@ export const events = [
     title: `Συνέδριο Θερμοδυναμικής "Κωνσταντίνος Καραθεοδωρή"`,
     item: () => SinedrioThermodinamikis2023(),
     from: "",
+  },
+  {
+    slug: "mathimatikoSynedrio",
+    title: "Παγκόσμιο Μαθηματικό Συνέδριο στη Νέα Βύσσα",
+    item: () => MathimatikoSynedrio(),
+    from: "(πηγή: https://geofarmak.blogspot.com/2012/04/blog-post.html)",
+  },
+
+  {
+    slug: "diethnisMeraMouseiwn",
+    title: "Διεθνής Ημέρα Μουσείων",
+    item: () => DiethnisMeraMouseiwn(),
   },
 ];
 

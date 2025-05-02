@@ -95,7 +95,9 @@ export default async function SingleEkdilosiPage({ params }) {
           <div className="text-justify space-y-2 text-sm ">
             {localEvent.item()}
             {localEvent.from && (
-              <div className="text-xs text-gray-500">{localEvent.from}</div>
+              <div className="text-xs text-gray-500 text-justify">
+                {localEvent.from}
+              </div>
             )}
           </div>
         )}
