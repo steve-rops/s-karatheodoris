@@ -47,7 +47,7 @@ export default function Prosexws() {
                 </Badge>
               )}
               <Image
-                src="/plateia.jpg"
+                src={ev.images.baner}
                 fill
                 className="rounded-t-lg object-cover"
                 alt="event image"

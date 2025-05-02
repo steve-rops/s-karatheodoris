@@ -23,11 +23,11 @@ export default function Hamburger() {
       <SheetTrigger>
         <AlignJustify size={30} />
       </SheetTrigger>
-      <SheetContent className="overflow-y-auto">
+      <SheetContent className="overflow-y-auto w-[85%]">
         <SheetHeader>
           <SheetTitle className="text-primary">Μενού</SheetTitle>
         </SheetHeader>
-        <div className="flex-col justify-center pl-4 space-y-3 ">
+        <div className="flex-col justify-center pl-3 space-y-3 ">
           {menuLinks.map((el) => (
             <MenuItem
               href={el.href}
@@ -69,7 +69,7 @@ const MenuItem = ({ href, title, links, setWholeMenuIsOpen }) => {
       )}
 
       {submenuIsOpen && (
-        <div className="pl-8 flex flex-col ">
+        <div className="pl-6 flex flex-col ">
           {links.map((el) => (
             <div key={el.title} onClick={() => setWholeMenuIsOpen(false)}>
               <Link
