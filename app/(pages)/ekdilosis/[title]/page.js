@@ -83,7 +83,7 @@ export default async function SingleEkdilosiPage({ params }) {
 
               {event.notice && (
                 <div className="text-gray-600 pt-4">
-                  <p className="underline">Ενημέρωση:</p>
+                  <p className="underline">Λεπτομέρειες:</p>
                   <p>{event.notice}</p>
                 </div>
               )}
