@@ -107,16 +107,18 @@ export default function DrastiriotitesPage() {
           το παρελθόν και χτίζοντας το μέλλον.
         </p>
 
-        <p>Χοροδιδάσκαλος: Σαρδάνη Ελένη</p>
-        <p>
-          Τηλέφωνο επικοινωνίας:{" "}
-          <a
-            className="text-blue-500 underline underline-offset-1 decoration-blue-500"
-            href="tel:+306987360713"
-          >
-            +306987360713
-          </a>
-        </p>
+        <div>
+          <p>Χοροδιδάσκαλος: Σαρδάνη Ελένη</p>
+          <p>
+            Τηλέφωνο επικοινωνίας:{" "}
+            <a
+              className="text-blue-500 underline underline-offset-1 decoration-blue-500"
+              href="tel:+306987360713"
+            >
+              +306987360713
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   );
