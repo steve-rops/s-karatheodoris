@@ -9,25 +9,28 @@ export default function DrastiriotitesHomePage() {
         Δραστηριότητες
       </h2>
       <p className="text-center text-gray-700">
-        Κάποιες από τις δραστηριότητες του συλλόγου μας.
+        Κάποιες από τις δραστηριότητες του Συλλόγου μας.
       </p>
 
       <div className="space-y-2 gap-2 w-[75%] lg:w-[50%] mx-auto">
         <Badge variant="secondary" className=" text-[13px] col-span-2 w-full ">
-          Χορευτικό Τμήμα Ενηλίκων
-        </Badge>
-
-        <Badge variant="secondary" className=" text-[13px] col-span-2 w-full">
           Δύο Χορευτικά Τμήματα Παίδων
         </Badge>
 
-        <Badge variant="secondary" className=" text-[13px] col-span-3 w-full">
-          Χορευτικό Τμήμα Εφήβων
+        <Badge variant="secondary" className=" text-[13px] col-span-2 w-full">
+          Χορευρικό Τμήμα Εφήβων
+        </Badge>
+
+        <Badge
+          variant="secondary"
+          className=" text-[13px] col-span-3 w-full text-center"
+        >
+          Χορευτικό Τμήμα Ενηλίκων <br /> (σύντομα)
         </Badge>
       </div>
       <div className="flex justify-center">
         <Link href="/silogos/drastiriotites">
-          <Button>Μάθε περισσότερα</Button>
+          <Button>Μάθετε περισσότερα</Button>
         </Link>
       </div>
     </div>

@@ -9,8 +9,7 @@ export default function EkdiloseisHomePage() {
         Εκδηλώσεις
       </h2>
       <p className="text-center text-gray-700">
-        Μάθετε ό,τι χρειάζεστε για τις Εκδηλώσεις του χωριού και του Συλλόγου
-        μας.
+        Μάθετε ό,τι χρειάζεστε για τις Εκδηλώσεις του Συλλόγου μας.
       </p>
       <Link href="/ekdilosis" className="flex justify-center ">
         <Button className="hover:cursor-pointer">Όλες οι Εκδηλώσεις</Button>
