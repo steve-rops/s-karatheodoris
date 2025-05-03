@@ -18,7 +18,7 @@ export default function DrastiriotitesHomePage() {
         </Badge>
 
         <Badge variant="secondary" className=" text-[13px] col-span-2 w-full">
-          Χορευρικό Τμήμα Εφήβων
+          Χορευτικό Τμήμα Εφήβων
         </Badge>
 
         <Badge

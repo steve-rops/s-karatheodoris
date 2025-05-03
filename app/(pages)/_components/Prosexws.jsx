@@ -37,7 +37,7 @@ export default function Prosexws() {
       {prosexws.map((ev, index) => (
         <div
           key={index}
-          className="min-w-[85%] mx-auto border border-primary/30 bg-background rounded-lg p-2 border-l-4 border-l-green-400 space-y-3 snap-start"
+          className="min-w-[85%] mx-auto border border-primary/30 bg-background rounded-lg p-2 border-l-4 border-l-green-400 space-y-3 snap-start flex flex-col justify-between"
         >
           {ev.status === "ok" && (
             <div className="relative w-full h-32">
@@ -67,6 +67,7 @@ export default function Prosexws() {
                 {ev.location.name}
               </a>
             </div>
+
             <div className="flex items-center gap-2">
               <div className="flex items-center gap-2">
                 <Calendar />
