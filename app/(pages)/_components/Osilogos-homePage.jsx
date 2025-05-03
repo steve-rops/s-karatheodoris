@@ -18,7 +18,7 @@ export default function OsilogosHomePage() {
       </p>
       <Link className="flex justify-center" href="/silogos">
         <Button size="sm" className="hover:cursor-pointer">
-          Μάθε Περισσότερα
+          Μάθετε Περισσότερα
         </Button>
       </Link>
     </div>
