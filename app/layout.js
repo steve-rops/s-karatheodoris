@@ -5,7 +5,7 @@ const poppins = Poppins({ weight: ["200", "400", "700"], subsets: ["latin"] });
 
 export const metadata = {
   title: "s-karatheodoris",
-  description: "Η ιστοσελίδα του Συλλλόγου Νέας Βύσσας 'Στέφανος Καραθεοδωρής'",
+  description: "Πολιτιστικός Σύλλογος Νέας Βύσσας 'Στέφανος Καραθεοδωρής'",
   keywords: [
     "karatheodoris",
     "Stefanos Karatheodoris",

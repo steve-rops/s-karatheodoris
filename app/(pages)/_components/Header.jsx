@@ -7,7 +7,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Image from "next/image";
-import { ChevronDown, Mail } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { FaInstagram, FaFacebook, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
 import Hamburger from "./Hamburger";
@@ -16,7 +16,7 @@ import { menuLinks } from "@/data";
 
 export default function Header() {
   return (
-    <div className="w-full">
+    <header className="w-full">
       {/* social media links */}
       <div className="bg-primary flex items-center justify-between p-2">
         <div className=" text-[var(--muted)] flex items-center gap-4">
@@ -117,6 +117,6 @@ export default function Header() {
           </ul>
         </div>
       </nav>
-    </div>
+    </header>
   );
 }
