@@ -4,7 +4,7 @@ import Prosexws from "./Prosexws";
 
 export default function EkdiloseisHomePage() {
   return (
-    <div className="w-full space-y-4 bg-muted/35 p-2  rounded-md shadow-md">
+    <section className="w-full space-y-4 bg-muted/35 p-2  rounded-md shadow-md">
       <h2 className="text-xl font-semibold text-primary text-center">
         Εκδηλώσεις
       </h2>
@@ -16,6 +16,6 @@ export default function EkdiloseisHomePage() {
       </Link>
 
       <Prosexws />
-    </div>
+    </section>
   );
 }

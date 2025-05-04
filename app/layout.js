@@ -1,10 +1,16 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { icons } from "lucide-react";
 
 const poppins = Poppins({ weight: ["200", "400", "700"], subsets: ["latin"] });
 
 export const metadata = {
-  title: "s-karatheodoris",
+  title: "Πολιτιστικός Σύλλογος Νέας Βύσσας 'Στέφανος Καραθεοδωρής'",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
   description: "Πολιτιστικός Σύλλογος Νέας Βύσσας 'Στέφανος Καραθεοδωρής'",
   keywords: [
     "karatheodoris",
