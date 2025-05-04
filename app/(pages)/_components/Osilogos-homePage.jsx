@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function OsilogosHomePage() {
   return (
-    <div className="space-y-2 p-2 py-4">
+    <section className="space-y-2 p-2 py-4">
       <h2 className="text-xl font-semibold text-primary text-center">
         Ο Σύλλογος
       </h2>
@@ -21,6 +21,6 @@ export default function OsilogosHomePage() {
           Μάθετε Περισσότερα
         </Button>
       </Link>
-    </div>
+    </section>
   );
 }

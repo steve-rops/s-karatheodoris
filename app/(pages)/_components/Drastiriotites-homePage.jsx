@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function DrastiriotitesHomePage() {
   return (
-    <div className="w-full space-y-2 py-4 rounded-md lg:w-[70%] lg:mx-auto ">
+    <section className="w-full space-y-2 py-4 rounded-md lg:w-[70%] lg:mx-auto ">
       <h2 className="text-xl font-semibold text-primary text-center">
         Δραστηριότητες
       </h2>
@@ -33,6 +33,6 @@ export default function DrastiriotitesHomePage() {
           <Button>Μάθετε περισσότερα</Button>
         </Link>
       </div>
-    </div>
+    </section>
   );
 }
