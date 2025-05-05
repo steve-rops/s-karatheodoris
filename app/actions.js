@@ -11,8 +11,6 @@ export const handleSubmit = async (formData) => {
       ? process.env.ENV_BASE_URL
       : process.env.PRODUCTION_BASE_URL;
 
-  console.log(baseURL);
-
   const submisionData = {
     name: formData.get("name"),
     surname: formData.get("surname"),

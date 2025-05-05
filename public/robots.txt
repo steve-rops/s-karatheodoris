@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+Disallow: /admin/
+Disallow: /login/
+Allow: /
+
+Sitemap: https://s-karatheodoris.gr/sitemap.xml
