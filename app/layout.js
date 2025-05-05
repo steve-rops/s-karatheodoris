@@ -1,6 +1,5 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import { icons } from "lucide-react";
 
 const poppins = Poppins({ weight: ["200", "400", "700"], subsets: ["latin"] });
 
