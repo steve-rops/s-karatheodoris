@@ -6,9 +6,9 @@ const poppins = Poppins({ weight: ["200", "400", "700"], subsets: ["latin"] });
 export const metadata = {
   title: "Πολιτιστικός Σύλλογος Νέας Βύσσας 'Στέφανος Καραθεοδωρής'",
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
-    apple: "/favicon.svg",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
   description: "Πολιτιστικός Σύλλογος Νέας Βύσσας 'Στέφανος Καραθεοδωρής'",
   keywords: [
@@ -17,6 +17,8 @@ export const metadata = {
     "Καραθεοδωρης",
     "Καραθεοδωρής",
     "Στεφανος Καραθεοδωρης",
+    "skaratheodoris",
+    "skaratheodoris.gr",
   ],
 };
 

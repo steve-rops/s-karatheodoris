@@ -25,6 +25,8 @@ export async function GET() {
     "mouseio-karatheodori",
     "otoposmas",
     "silogos",
+    "silogos/drastiriotites",
+    "silogos/melhds",
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
