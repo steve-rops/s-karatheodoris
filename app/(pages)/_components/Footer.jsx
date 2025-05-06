@@ -69,7 +69,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/drastiriotites"
+                  href="/silogos/drastiriotites"
                   className="text-muted hover:text-white"
                 >
                   Δραστηριότητες
