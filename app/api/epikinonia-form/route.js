@@ -12,7 +12,7 @@ export async function POST(req) {
 
     const { data, error } = await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: "somebiss@gmail.com",
+      to: "skaratheodoris@yahoo.gr",
       subject: `New Contact Form Submission from ${name}`,
       html: `
       <p><strong>Name:</strong> ${name}</p>
@@ -22,6 +22,8 @@ export async function POST(req) {
       <p>${message}</p>
     `,
     });
+
+    console.log(error);
 
     if (error) {
       return NextResponse.json({ error }, { status: 500 });
