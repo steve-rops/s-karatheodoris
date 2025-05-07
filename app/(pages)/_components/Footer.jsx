@@ -1,4 +1,3 @@
-import FacebookIcon from "@/public/facebook";
 import { Mail, MapPin, Phone, Smartphone } from "lucide-react";
 import { FaInstagram, FaFacebook, FaEnvelope } from "react-icons/fa";
 import Image from "next/image";
