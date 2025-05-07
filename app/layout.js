@@ -5,7 +5,6 @@ import Head from "next/head";
 const poppins = Poppins({ weight: ["200", "400", "700"], subsets: ["latin"] });
 
 export const metadata = {
-  title: "Πολιτιστικός Σύλλογος Νέας Βύσσας 'Στέφανος Καραθεοδωρής'",
   icons: {
     icon: "/icon.ico",
     shortcut: "/icon.ico",
@@ -34,6 +33,7 @@ export default function RootLayout({ children }) {
         <meta name="theme-color" content="#ffffff" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
+        <title>Πολιτιστικός Σύλλογος Νέας Βύσσας «Στέφανος Καραθεοδωρής»</title>
       </Head>
       <body className={`${poppins.className} antialiased`}>
         <div className="max-w-[1440px] mx-auto">{children}</div>
