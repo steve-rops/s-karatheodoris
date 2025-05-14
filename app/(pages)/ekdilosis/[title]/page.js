@@ -81,10 +81,10 @@ export default async function SingleEkdilosiPage({ params }) {
                 </a>
               </div>
 
-              {event.notice && (
+              {localEvent.prosexwsDetails && (
                 <div className="text-gray-600 pt-4">
                   <p className="underline">Λεπτομέρειες:</p>
-                  <p>{event.notice}</p>
+                  {localEvent.prosexwsDetails()}
                 </div>
               )}
             </div>
