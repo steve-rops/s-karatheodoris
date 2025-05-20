@@ -18,23 +18,39 @@ export const EkdilosisList = () => {
   if (events === "sec") chosenData = data.secEvents;
 
   const dataToShow = chosenData.sort((a, b) => {
-    const aIsPast = isPast(addDays(a.startDate, 1));
-    const bIsPast = isPast(addDays(b.startDate, 1));
+    const now = new Date();
+    const aDate = addDays(a.startDate, 1);
+    const bDate = addDays(b.startDate, 1);
 
-    // If one is past and the other isn't, future one goes first
-    if (aIsPast && !bIsPast) return 1;
-    if (!aIsPast && bIsPast) return -1;
+    const aIsFuture = !isPast(aDate);
+    const bIsFuture = !isPast(bDate);
 
-    // Both are in the future OR both in the past
-    if (aIsPast && bIsPast) {
-      // Past events: ascending for main, descending for sec
-      return events === "main"
-        ? compareAsc(a.startDate, b.startDate)
-        : compareDesc(a.startDate, b.startDate);
-    } else {
-      // Future events: always ascending
+    const aIsPinned = a.isPinned;
+    console.log(a);
+    const bIsPinned = b.isPinned;
+
+    // 1. Future events first
+    if (aIsFuture && !bIsFuture) return -1;
+    if (!aIsFuture && bIsFuture) return 1;
+
+    if (aIsFuture && bIsFuture) {
+      // Both future: sort ascending
       return compareAsc(a.startDate, b.startDate);
     }
+
+    // 2. Then pinned past events
+    if (aIsPinned && !bIsPinned) return -1;
+    if (!aIsPinned && bIsPinned) return 1;
+
+    if (aIsPinned && bIsPinned) {
+      // Both pinned: sort ascending
+      return compareAsc(a.startDate, b.startDate);
+    }
+
+    // 3. Remaining past events
+    return events === "main"
+      ? compareAsc(a.startDate, b.startDate)
+      : compareDesc(a.startDate, b.startDate);
   });
 
   return (
