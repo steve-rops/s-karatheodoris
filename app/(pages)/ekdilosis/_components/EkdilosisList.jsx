@@ -3,7 +3,7 @@
 import { Skeleton } from "@/components/ui/skeleton";
 import { useGetEvents } from "@/hooks/useGetEvents";
 import { prosexwsFlag } from "@/lib/utils";
-import { compareAsc, format, isPast } from "date-fns";
+import { addDays, compareAsc, compareDesc, format, isPast } from "date-fns";
 import { EventItem } from "./EventItem";
 import { useEkdilContext } from "@/context/ekdilosisContext";
 
@@ -18,11 +18,23 @@ export const EkdilosisList = () => {
   if (events === "sec") chosenData = data.secEvents;
 
   const dataToShow = chosenData.sort((a, b) => {
-    const aIsPast = isPast(a.startDate);
-    const bIsPast = isPast(b.startDate);
+    const aIsPast = isPast(addDays(a.startDate, 1));
+    const bIsPast = isPast(addDays(b.startDate, 1));
+
+    // If one is past and the other isn't, future one goes first
     if (aIsPast && !bIsPast) return 1;
     if (!aIsPast && bIsPast) return -1;
-    return compareAsc(a.startDate, b.startDate);
+
+    // Both are in the future OR both in the past
+    if (aIsPast && bIsPast) {
+      // Past events: ascending for main, descending for sec
+      return events === "main"
+        ? compareAsc(a.startDate, b.startDate)
+        : compareDesc(a.startDate, b.startDate);
+    } else {
+      // Future events: always ascending
+      return compareAsc(a.startDate, b.startDate);
+    }
   });
 
   return (
