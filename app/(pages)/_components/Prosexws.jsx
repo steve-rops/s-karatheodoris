@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { DIFERRENCE_IN_DAYS } from "@/data";
 import { useGetEvents } from "@/hooks/useGetEvents";
-import { differenceInDays, format, isFuture } from "date-fns";
+import { addDays, differenceInDays, format, isFuture } from "date-fns";
 import { Calendar, Clock, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,12 +19,12 @@ export default function Prosexws() {
   const prosexws = [
     ...mainEvents.filter(
       (ev) =>
-        isFuture(ev.startDate) &&
+        isFuture(addDays(ev.startDate, 1)) &&
         differenceInDays(ev.startDate, new Date()) < DIFERRENCE_IN_DAYS
     ),
     ...secEvents.filter(
       (ev) =>
-        isFuture(ev.startDate) &&
+        isFuture(addDays(ev.startDate, 1)) &&
         differenceInDays(ev.startDate, new Date()) < DIFERRENCE_IN_DAYS
     ),
   ];
