@@ -26,7 +26,6 @@ export const EkdilosisList = () => {
     const bIsFuture = !isPast(bDate);
 
     const aIsPinned = a.isPinned;
-    console.log(a);
     const bIsPinned = b.isPinned;
 
     // 1. Future events first
