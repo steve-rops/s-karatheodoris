@@ -101,4 +101,4 @@ export const events = [
   },
 ];
 
-export const DIFERRENCE_IN_DAYS = 31;
+export const DIFERRENCE_IN_DAYS = 15;
