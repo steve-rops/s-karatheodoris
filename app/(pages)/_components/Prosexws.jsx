@@ -60,11 +60,11 @@ export default function Prosexws() {
             <div className="flex items-center gap-2">
               <MapPin />
               <a
-                href={ev.location.href}
+                href={ev.location?.href || ""}
                 target="_blank"
                 className="text-blue-500 underline text-xs"
               >
-                {ev.location.name}
+                {ev.location?.name}
               </a>
             </div>
 
