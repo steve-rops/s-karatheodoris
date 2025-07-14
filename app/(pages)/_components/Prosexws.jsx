@@ -56,31 +56,45 @@ export default function Prosexws() {
           )}
           <h4 className="text-[16px] font-semibold">{ev.title}</h4>
 
-          <div className="text-gray-500 space-y-2 p-2">
-            <div className="flex items-center gap-2">
-              <MapPin />
-              <a
-                href={ev.location?.href || ""}
-                target="_blank"
-                className="text-blue-500 underline text-xs"
-              >
-                {ev.location?.name}
-              </a>
+          {ev.isMultiday ? (
+            <div>
+              {ev.startDate && ev.endDate && (
+                <div className="flex items-center gap-2">
+                  <Calendar />
+                  <span className="text-gray-600 font-bold">
+                    {format(new Date(ev.startDate), "dd/MM/yyyy")} -{" "}
+                    {format(new Date(ev.endDate), "dd/MM/yyyy")}{" "}
+                  </span>
+                </div>
+              )}
             </div>
+          ) : (
+            <div className="text-gray-500 space-y-2 p-2">
+              <div className="flex items-center gap-2">
+                <MapPin />
+                <a
+                  href={ev.location?.href || ""}
+                  target="_blank"
+                  className="text-blue-500 underline text-xs"
+                >
+                  {ev.location?.name}
+                </a>
+              </div>
 
-            <div className="flex items-center gap-2">
               <div className="flex items-center gap-2">
-                <Calendar />
-                <span className="text-xs">
-                  {format(ev.startDate, "dd/MM/yyyy")}
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock />
-                <span className="text-xs">{ev.startTime}</span>
+                <div className="flex items-center gap-2">
+                  <Calendar />
+                  <span className="text-xs">
+                    {format(ev.startDate, "dd/MM/yyyy")}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock />
+                  <span className="text-xs">{ev.startTime}</span>
+                </div>
               </div>
             </div>
-          </div>
+          )}
 
           <Link href={`/ekdilosis/${ev.slug}`}>
             <Button
