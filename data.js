@@ -9,6 +9,7 @@ import { SinedrioThermodinamikis2023 } from "./components/eventsDescription/Sine
 import { Vysseia } from "./components/eventsDescription/Vysseia";
 import { ProsexwsDiethnisMeraMouseiwn } from "./components/prosexwsDetails/ProsexwsDiethnisMeraMouseiwn";
 import { ProsexwsKonstantinoyKaiElenis } from "./components/prosexwsDetails/ProsexwsKonstantinoyKaiElenis";
+import ProsexwsVysseiaServerComponent from "./components/prosexwsDetails/ProsexwsVysseiaServerComponent";
 
 export const menuLinks = [
   {
@@ -68,7 +69,7 @@ export const events = [
     title: "Βύσσεια",
     item: () => Vysseia(),
     from: "",
-    prosexwsDetails: () => <p>Αναμένεται ανακοίνωση προγράμματος</p>,
+    prosexwsDetails: () => ProsexwsVysseiaServerComponent(),
   },
   {
     slug: "parousiasiBibliou-23",
