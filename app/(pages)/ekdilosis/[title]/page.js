@@ -61,25 +61,28 @@ export default async function SingleEkdilosiPage({ params }) {
             </div>
 
             <div className="space-y-2">
-              <div className="flex items-center gap-4">
-                <div className="flex items-center gap-1">
-                  <Calendar />{" "}
-                  <span>{format(event.startDate, "dd/MM/yyyy")}</span>
+              {/* Dates */}
+              {event.startDate && event.endDate && (
+                <div className="flex items-center gap-2">
+                  <Calendar />
+                  <span className="text-gray-600 font-bold">
+                    {format(new Date(event.startDate), "dd/MM/yyyy")} -{" "}
+                    {format(new Date(event.endDate), "dd/MM/yyyy")}{" "}
+                  </span>
                 </div>
+              )}
+
+              {event.location && (
                 <div className="flex items-center gap-1">
-                  <Clock />
-                  <span>{event.startTime}</span>
+                  <Map />
+                  <a
+                    className="text-blue-500 underline decoration-blue-500"
+                    href={event.location.href}
+                  >
+                    {event.location.name}
+                  </a>
                 </div>
-              </div>
-              <div className="flex items-center gap-1">
-                <Map />
-                <a
-                  className="text-blue-500 underline decoration-blue-500"
-                  href={event.location.href}
-                >
-                  {event.location.name}
-                </a>
-              </div>
+              )}
 
               {localEvent.prosexwsDetails && (
                 <div className="text-gray-600 pt-4">
