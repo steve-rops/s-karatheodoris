@@ -21,7 +21,7 @@ const vysseia25 = [
     },
     2: {
       time: "21:30",
-      title: "Προβολή ταινίας «ΦΑΝΤΣΑΣΙΑ» του Αλέξη Καρδαρά",
+      title: "Προβολή ταινίας «ΦΑΝΤΑΣΙΑ» του Αλέξη Καρδαρά",
       location: {
         name: "Μουσείο των Καραθεοδωρή",
         href: "https://maps.app.goo.gl/ipEF7PnSQS2WMWHT7",
