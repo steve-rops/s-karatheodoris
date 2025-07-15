@@ -40,7 +40,7 @@ export default async function SingleEkdilosiPage({ params }) {
               status === "προγραμματισμένο" && "border-green-700 bg-green-100",
               status === "αναβλήθηκε" && "border-yellow-700 bg-yellow-100",
               status === "ακυρώθηκε" && "border-red-700 bg-red-100",
-              "border rounded-lg space-y-4 p-2 lg:w-[65%] mx-auto"
+              "border rounded-lg space-y-4 p-2 lg:w-full mx-auto"
             )}
           >
             <div className="lg:flex lg:items-center lg:justify-between">
