@@ -157,7 +157,22 @@ export const ProsexwsVysseia25 = () => {
   };
   return (
     <div className="p-2 relative w-full">
+      <div className="grid place-items-center p-2">
+        <div className="flex gap-2 mx-auto">
+          {vysseia25.map((_, index) => (
+            <div
+              key={index}
+              className={`w-3 h-3 rounded-full border border-primary ${
+                dotIndex === index ? "bg-primary" : ""
+              } cursor-pointer`}
+              onClick={() => handleDotClick(index)}
+            ></div>
+          ))}
+        </div>
+      </div>
       <Carousel setApi={setApi} className="md:w-[90%] mx-auto">
+        <CarouselPrevious className="-top-4 left-0 w-6 h-6 md:hidden  " />
+        <CarouselNext className="-top-4 right-0 w-6 h-6 md:hidden " />
         <CarouselContent className=" w-full flex md:w-[95%] mx-auto gap-12 md:gap-16 ">
           {vysseia25.map((ev, i) => (
             <CarouselItem
@@ -201,23 +216,9 @@ export const ProsexwsVysseia25 = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="top-1/3 hidden md:flex " />
-        <CarouselNext className="top-1/3 hidden md:flex " />
+        <CarouselPrevious className="hidden md:flex top-1/3" />
+        <CarouselNext className="hidden md:flex top-1/3" />
       </Carousel>
-
-      <div className="grid place-items-center p-2">
-        <div className="flex gap-2 mx-auto">
-          {vysseia25.map((_, index) => (
-            <div
-              key={index}
-              className={`w-3 h-3 rounded-full border border-primary ${
-                dotIndex === index ? "bg-primary" : ""
-              } cursor-pointer`}
-              onClick={() => handleDotClick(index)}
-            ></div>
-          ))}
-        </div>
-      </div>
     </div>
   );
 };
