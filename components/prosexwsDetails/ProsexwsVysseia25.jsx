@@ -10,7 +10,7 @@ import {
 import { useEffect, useState } from "react";
 const vysseia25 = [
   {
-    date: new Date("2025-05-23T00:00:00"),
+    date: new Date("2025-07-23T00:00:00"),
     1: {
       time: "18:00",
       title: "Ποδηλατοδρομία και παιχνίδια",
@@ -29,7 +29,7 @@ const vysseia25 = [
     },
   },
   {
-    date: new Date("2025-05-24T00:00:00"),
+    date: new Date("2025-07-24T00:00:00"),
     1: {
       time: "18:30",
       title:
@@ -50,7 +50,7 @@ const vysseia25 = [
     },
   },
   {
-    date: new Date("2025-05-25T00:00:00"),
+    date: new Date("2025-07-25T00:00:00"),
     1: {
       time: "19:30",
       title:
@@ -86,7 +86,7 @@ const vysseia25 = [
     },
   },
   {
-    date: new Date("2025-05-26T00:00:00"),
+    date: new Date("2025-07-26T00:00:00"),
     1: {
       time: "7:30",
       title:
