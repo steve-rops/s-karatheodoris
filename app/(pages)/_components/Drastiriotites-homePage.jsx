@@ -25,7 +25,7 @@ export default function DrastiriotitesHomePage() {
           variant="secondary"
           className=" text-[13px] col-span-3 w-full text-center"
         >
-          Χορευτικό Τμήμα Ενηλίκων <br /> (σύντομα)
+          Χορευτικό Τμήμα Ενηλίκων
         </Badge>
       </div>
       <div className="flex justify-center">
