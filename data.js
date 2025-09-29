@@ -4,6 +4,7 @@ import { KatharaDeutera } from "./components/eventsDescription/KatharaDeutera";
 import { KonstantinoyKaiElenis } from "./components/eventsDescription/KonstantinoyKaiElenis";
 import { MathimatikoSynedrio } from "./components/eventsDescription/MathimatikoSynedrio";
 import { MnhmosKaratheodori } from "./components/eventsDescription/MnhmosKaratheodori";
+import { PanigirisTimioyProdromoy } from "./components/eventsDescription/PanigirisTimioyProdromoy";
 import { ParousiasiBibliou23 } from "./components/eventsDescription/ParousiasiBibliou23";
 import { SinedrioThermodinamikis2023 } from "./components/eventsDescription/SinedrioThermodinamikis2023";
 import { Vysseia } from "./components/eventsDescription/Vysseia";
@@ -90,7 +91,7 @@ export const events = [
     title: "Παγκόσμιο Μαθηματικό Συνέδριο στη Νέα Βύσσα",
     item: () => MathimatikoSynedrio(),
     from: "(πηγή: https://geofarmak.blogspot.com/2012/04/blog-post.html)",
-    prosexwsDetails: () => ProsexwsDiethnisMeraMouseiwn(),
+    prosexwsDetails: () => <p>Αναμένεται ανακοίνωση προγράμματος</p>,
   },
 
   {
@@ -99,6 +100,13 @@ export const events = [
     item: () => DiethnisMeraMouseiwn(),
     from: "",
     prosexwsDetails: () => ProsexwsDiethnisMeraMouseiwn(),
+  },
+  {
+    slug: "panigirisTimioyProdromoy",
+    title: "Πανήγυρις Ιερού Μετοχίου Τιμίου Προδρόμου",
+    item: () => PanigirisTimioyProdromoy(),
+    from: "",
+    prosexwsDetails: () => <p>Αναμένεται ανακοίνωση προγράμματος</p>,
   },
 ];
 

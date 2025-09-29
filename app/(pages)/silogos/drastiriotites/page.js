@@ -72,8 +72,8 @@ export default function DrastiriotitesPage() {
         <ul className="list-disc ml-6 space-y-6">
           <li>
             <span className="font-medium">
-              Δύο Παιδικά Χορευτικά Τμήματα και Ένα Εφηβικό Τμήμα, που
-              λειτουργούν σταθερά:
+              Δύο Παιδικά Χορευτικά Τμήματα, Ένα Εφηβικό Τμήμα και ένα Ενηλίκων,
+              που λειτουργούν σταθερά:
             </span>
             <ul className="list-[circle] ml-6 mt-2 space-y-1 ">
               <li>
